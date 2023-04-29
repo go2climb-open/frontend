@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements  OnInit {
 
   services: any[] = [1,2,3,4,5,6];
-
+  value = 'Clear me';
   constructor() { }
 
   ngOnInit() {

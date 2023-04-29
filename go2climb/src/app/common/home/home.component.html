@@ -1,3 +1,13 @@
+<div class="search">
+  <mat-form-field class="search-field">
+    <mat-label>Clearable input</mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
 <mat-grid-list cols="4">
   <mat-grid-tile *ngFor="let service of services" >
     <mat-card class="service-card">
