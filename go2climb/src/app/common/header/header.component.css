@@ -13,7 +13,6 @@
 .services{
   font-family:'Segoe UI light' ;
   color: whitesmoke;
-  flex: auto;
   margin-left: 15px;
 }
 
@@ -31,4 +30,8 @@
 
 a.log:hover, a.services:hover, a.account:hover{
   font-weight: bold;
+}
+
+.mat-spacer {
+  flex: 1 1 auto;
 }
