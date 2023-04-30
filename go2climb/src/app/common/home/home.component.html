@@ -15,7 +15,7 @@
 
 <mat-grid-list cols="3" rowHeight="390px">
   <mat-grid-tile *ngFor="let service of services" style="display: flex;">
-    <mat-card class="service-card">
+    <mat-card class="service-card" (click)="serviceDetail()">
       <img mat-card-image src="https://www.rei.com/assets/adventures/images/homepage/about/about-uncommon-tile/live.jpg" class="card-img" alt="Photo of a Shiba Inu">
       <mat-card-content>
         <mat-card-title>Tour Lunahuna</mat-card-title>

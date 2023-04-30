@@ -16,6 +16,10 @@ export class HomeComponent implements  OnInit {
   ngOnInit() {
   }
 
+  serviceDetail(){
+    console.log('servicedetail');
+  }
+
 }
 
 

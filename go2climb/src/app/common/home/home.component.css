@@ -4,7 +4,8 @@
   margin-bottom: 55px;
   align-items: center;
   justify-content: center;
-  border: 1px solid #356F80
+  border: 1px solid #356F80;
+  cursor: pointer;
 
 }
 .card-img{
