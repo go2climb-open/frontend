@@ -1,18 +1,33 @@
 .service-card {
-  max-width: 300px;
+  max-width: 400px;
+  min-width: 300px;
+  margin-bottom: 55px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #356F80
 
 }
-.service-card-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+.card-img{
+  max-width: 400px;
+  padding: 15px;
+
 }
 
-.search{
+.header{
   margin-top: 15px;
-  margin-left: 80%;
 }
+
 
 .search-field{
- width: 350px;
+ width: 550px;
 }
 
+.add-btn{
+  background-color: #356F80;
+}
+
+#btn{
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+}
