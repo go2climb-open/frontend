@@ -1,0 +1,65 @@
+<mat-card>
+    <mat-card-title>Create your account</mat-card-title>
+    <div>
+        <mat-grid-list cols="1" rowHeight="100">
+            <mat-grid-tile>
+                <mat-form-field syle="...">
+                    <mat-label>Agency name:</mat-label>
+                    <input matInput placeholder="agency name" formControlName="agencyName" required />
+                    <mat-error *ngIf="agencyName.errors?.['required']">
+                        Agency name is required
+                    </mat-error>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field syle="...">
+                    <mat-label>E-mail:</mat-label>
+                    <input matInput placeholder="user@domain.com" formControlName="email" required />
+                    <mat-error *ngIf="email.errors?.['required']">
+                        Email is required
+                    </mat-error>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field syle="...">
+                    <mat-label>Phone:</mat-label>
+                    <input matInput placeholder="*********" formControlName="phone" required />
+                    <mat-error *ngIf="phone.errors?.['required']">
+                        Phone is required
+                    </mat-error>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field syle="...">
+                    <mat-label>Password:</mat-label>
+                    <input matInput placeholder="password" formControlName="password" required />
+                    <mat-error *ngIf="password.errors?.['required']">
+                        Email is required
+                    </mat-error>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field syle="...">
+                    <mat-label>Location:</mat-label>
+                    <input matInput placeholder="location" formControlName="location" required />
+                    <mat-error *ngIf="location.errors?.['required']">
+                        Location is required
+                    </mat-error>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field syle="...">
+                    <mat-label>RUC:</mat-label>
+                    <input matInput placeholder="RUC" formControlName="ruc" required />
+                    <mat-error *ngIf="ruc.errors?.['required']">
+                        Location is required
+                    </mat-error>
+                </mat-form-field>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <mat-card-actions align="end">
+        <button mat-button class="material-button" (click)="cancelSignUp">Cancel</button>
+        <button mat-button class="material-button" (click)="signUp">Sign-Up</button>
+    </mat-card-actions>
+</mat-card>
