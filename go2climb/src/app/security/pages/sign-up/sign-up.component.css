@@ -1,3 +1,14 @@
 .material-button {
     text-transform: uppercase; 
 }
+
+.mat-form-field {
+    width: 40%;
+    
+}
+
+.form {
+    min-width: 150px;
+    width: 100%;
+}
+

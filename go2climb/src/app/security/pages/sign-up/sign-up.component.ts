@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+interface Type {
+  value: string;
+  viewValue: String;
+}
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -9,14 +14,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SignUpComponent implements OnInit {
 
   signUpForm: FormGroup;
+
   constructor(public builder: FormBuilder) {
     this.signUpForm = this.builder.group({
       email: ['', [Validators.email, Validators.required]],
-      password: ['', [Validators.required, Validators.minLength(4)]],
-      agencyName: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      name: ['', [Validators.required]],
       phone: ['', [Validators.required, Validators.maxLength(9)]],
-      location: ['', [Validators.required]],
-      ruc: ['', [Validators.required]]
+      type: ['', [Validators.required]]
     })
   }
 
@@ -28,21 +33,22 @@ export class SignUpComponent implements OnInit {
     return this.signUpForm.controls['password'];
   }
 
-  get agencyName(){
-    return this.signUpForm.controls['agencyName'];
+  get name(){
+    return this.signUpForm.controls['name'];
   }
 
   get phone(){
     return this.signUpForm.controls['phone'];
   }
   
-  get location(){
-    return this.signUpForm.controls['location'];
+  get type(){
+    return this.signUpForm.controls['type'];
   }
 
-  get ruc(){
-    return this.signUpForm.controls['ruc'];
-  }
+  types: Type[] = [
+    {value: 'agent', viewValue: 'Agent'},
+    {value: 'turist', viewValue: 'Turist'},
+  ]
 
   ngOnInit(): void {
       
