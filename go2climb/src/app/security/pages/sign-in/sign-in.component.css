@@ -1,0 +1,14 @@
+
+.login-example-card{
+  background-color: rgba(53, 111, 128, 1);
+  width: 50%;
+  height: 23rem;
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.login-example-full-width{
+  width: 100%;
+  margin-top: 15px;
+}

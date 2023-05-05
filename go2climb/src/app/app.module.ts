@@ -19,6 +19,7 @@ import { HomeComponent } from './common/home/home.component';
 import  { MatIconModule } from "@angular/material/icon";
 import  { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
+import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AccountComponent } from './components/account/account.component';
     AccountAgencyComponent,
     SignUpComponent,
     HomeComponent,
-    AccountComponent
+    AccountComponent,
+    SignInComponent
 
   ],
   imports: [
