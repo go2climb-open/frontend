@@ -17,6 +17,8 @@ import { HomeComponent } from './common/home/home.component';
 import  { MatIconModule } from "@angular/material/icon";
 import  { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AccountComponent } from './components/account/account.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     HomeComponent
+    AccountComponent
   ],
   imports: [
     BrowserModule,
