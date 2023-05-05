@@ -42,7 +42,7 @@ import { AccountComponent } from './components/account/account.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
     MatIconModule,
     HttpClientModule,
     FormsModule
