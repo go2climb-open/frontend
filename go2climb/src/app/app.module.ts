@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +12,8 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
+import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
+import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './common/home/home.component';
 import  { MatIconModule } from "@angular/material/icon";
 import  { HttpClientModule } from '@angular/common/http';
@@ -25,8 +26,10 @@ import { AccountComponent } from './components/account/account.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    SignUpComponent,
     HomeComponent,
     AccountComponent
+
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { AccountComponent } from './components/account/account.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatSelectModule
     MatIconModule,
     HttpClientModule,
     FormsModule
