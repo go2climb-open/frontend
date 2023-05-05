@@ -33,7 +33,9 @@
 
 .profilePhoto{
   max-width: 100%;
+  min-width: 250px;
   max-height: 400%;
+  min-height: 250px;
   border-radius: 100%;
   object-fit:cover;
   display: flex;
