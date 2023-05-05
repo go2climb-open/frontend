@@ -1,0 +1,33 @@
+<div class="header" style="display: flex; justify-content: end;">
+  <div style="padding-right: 50%;">
+    <h1 style="font-weight: bold; color: #356F80;">Services</h1>
+  </div>
+  <div style="margin-right: 5%;">
+    <mat-form-field class="search-field" appearance="outline">
+      <mat-label>Search</mat-label>
+      <input matInput type="text" [(ngModel)]="value" >
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="search(value)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>
+
+<mat-grid-list cols="3" rowHeight="390px">
+  <mat-grid-tile *ngFor="let service of services" style="display: flex;">
+    <mat-card class="service-card" (click)="serviceDetail()">
+      <img mat-card-image src="https://www.rei.com/assets/adventures/images/homepage/about/about-uncommon-tile/live.jpg" class="card-img" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <mat-card-title>Tour Lunahuna</mat-card-title>
+        <mat-card-subtitle style="margin-left: 50px;">Lima</mat-card-subtitle>
+        <p style="margin-left: 50px;"> 150$ </p>
+      </mat-card-content>
+    </mat-card>
+ </mat-grid-tile>
+</mat-grid-list>
+
+<div *ngIf="userType == true" style="display: flex;justify-content: end;">
+  <div style="margin-right: 5%;" id="btn">
+    <button mat-fab extended class="add-btn"> <mat-icon>add</mat-icon>Add</button>
+  </div>
+</div>
