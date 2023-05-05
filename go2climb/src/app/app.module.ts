@@ -25,7 +25,7 @@ import { AccountComponent } from './components/account/account.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
     AccountComponent
   ],
   imports: [
