@@ -20,6 +20,7 @@ import  { MatIconModule } from "@angular/material/icon";
 import  { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
 import { SignInComponent } from './security/pages/sign-in/sign-in.component';
+import {AuthService} from "./security/service/auth.service";
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { SignInComponent } from './security/pages/sign-in/sign-in.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
