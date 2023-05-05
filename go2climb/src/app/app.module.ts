@@ -18,7 +18,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './common/home/home.component';
 import  { MatIconModule } from "@angular/material/icon";
 import  { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { AccountComponent } from './components/account/account.component';
 
 

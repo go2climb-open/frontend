@@ -40,7 +40,7 @@ export class SignUpComponent implements OnInit {
   get phone(){
     return this.signUpForm.controls['phone'];
   }
-  
+
   get type(){
     return this.signUpForm.controls['type'];
   }
@@ -51,7 +51,7 @@ export class SignUpComponent implements OnInit {
   ]
 
   ngOnInit(): void {
-      
+
   }
 
   cancelSignUp(){
