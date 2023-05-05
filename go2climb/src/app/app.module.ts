@@ -7,11 +7,12 @@ import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatCardModule } from "@angular/material/card";
-import { ReactiveFormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
+import { AccountAgencyComponent } from './agency/account-agency/account-agency.component';
 import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './common/home/home.component';
@@ -26,6 +27,7 @@ import { AccountComponent } from './components/account/account.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    AccountAgencyComponent,
     SignUpComponent,
     HomeComponent,
     AccountComponent
@@ -42,6 +44,7 @@ import { AccountComponent } from './components/account/account.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    FormsModule,
     MatSelectModule,
     MatIconModule,
     HttpClientModule,
