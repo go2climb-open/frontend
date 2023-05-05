@@ -1,10 +1,11 @@
 <mat-toolbar class="toolbar">
   <span><img class="logo" src="../../assets/logo.png"></span>
-  <a mat-button class="account">Account</a>
-  <a mat-button class="services">Services</a>
+  <a *ngIf="userType == 1" mat-button class="account" [routerLink]="'/account'">Account</a>
+  <a *ngIf="userType == 2" mat-button class="account" [routerLink]="'/account-agency'">Account</a>
+  <a mat-button class="services" [routerLink]="'/home'">Services</a>
   <div class="mat-spacer"></div>
-  <a mat-button class="hello">Hello User</a>
-  <a mat-button class="log">Log out</a>
+  <a class="hello">Hello User</a>
+  <a mat-button class="log" routerLink="/sign-in">Log out</a>
 
 </mat-toolbar>
 
