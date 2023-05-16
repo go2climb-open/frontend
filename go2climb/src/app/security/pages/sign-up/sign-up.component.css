@@ -1,14 +1,16 @@
-.material-button {
-    text-transform: uppercase;
+.register-form {
+  background-color: rgba(53, 111, 128, 1);
+  width: 50%;
+  height: 36rem;
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
 }
-
 .mat-form-field {
-    width: 40%;
-
+  width: 100%;
+  margin-top: 15px;
 }
-
-.form {
-    min-width: 150px;
-    width: 100%;
+.mat-form-type {
+  width: 35%;
+  margin-top: 15px;
 }
-

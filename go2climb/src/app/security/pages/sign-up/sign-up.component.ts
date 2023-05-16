@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {AuthService} from "../../service/auth.service";
+import {Router} from "@angular/router";
+import {ToastrService} from "ngx-toastr";
 
 interface Type {
   value: string;
@@ -15,13 +18,13 @@ export class SignUpComponent implements OnInit {
 
   signUpForm: FormGroup;
 
-  constructor(public builder: FormBuilder) {
+  constructor(public builder: FormBuilder, private service: AuthService, private router: Router) {
     this.signUpForm = this.builder.group({
-      email: ['', [Validators.email, Validators.required]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      name: ['', [Validators.required]],
-      phone: ['', [Validators.required, Validators.maxLength(9)]],
-      type: ['', [Validators.required]]
+      email: this.builder.control('',Validators.compose([Validators.email, Validators.required])),
+      password: this.builder.control('',Validators.compose([Validators.required, Validators.minLength(8)])),
+      name: this.builder.control('',Validators.compose([Validators.required])),
+      phone: this.builder.control('',Validators.compose([Validators.required, Validators.maxLength(9)])),
+      type: this.builder.control('',Validators.compose([Validators.required]))
     })
   }
 
@@ -49,6 +52,15 @@ export class SignUpComponent implements OnInit {
     {value: 'agent', viewValue: 'Agent'},
     {value: 'turist', viewValue: 'Turist'},
   ]
+
+  proceedregister() {
+    if (this.signUpForm.valid) {
+      this.service.RegisterUser(this.signUpForm.value).subscribe(result => {
+        this.router.navigate(['login'])
+      });
+    } else {
+    }
+  }
 
   ngOnInit(): void {
 
