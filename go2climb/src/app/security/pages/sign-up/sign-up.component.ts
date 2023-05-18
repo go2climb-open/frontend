@@ -56,9 +56,11 @@ export class SignUpComponent implements OnInit {
   proceedregister() {
     if (this.signUpForm.valid) {
       this.service.RegisterUser(this.signUpForm.value).subscribe(result => {
+        alert("Please contact admin for enable access.','Registered successfully")
         this.router.navigate(['login'])
       });
     } else {
+      alert("Please enter valid data.")
     }
   }
 
