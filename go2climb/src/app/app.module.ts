@@ -21,6 +21,8 @@ import  { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
 import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import {AuthService} from "./security/service/auth.service";
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
+import {MatStepperModule} from "@angular/material/stepper";
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import {AuthService} from "./security/service/auth.service";
     SignUpComponent,
     HomeComponent,
     AccountComponent,
-    SignInComponent
+    SignInComponent,
+    ChangePasswordComponent
 
   ],
   imports: [
@@ -50,7 +53,8 @@ import {AuthService} from "./security/service/auth.service";
     MatSelectModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatStepperModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

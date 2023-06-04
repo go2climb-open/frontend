@@ -5,6 +5,7 @@ import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import { HomeComponent } from './common/home/home.component';
 import { AccountComponent } from './components/account/account.component';
 import { AccountAgencyComponent } from './agency/account-agency/account-agency.component';
+import {ChangePasswordComponent} from "./components/change-password/change-password.component";
 
 
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'home',  component: HomeComponent},
   {path: 'account',  component: AccountComponent},
   {path: 'account-agency',  component: AccountAgencyComponent},
+  {path: 'account-change-password',  component: ChangePasswordComponent}
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-account-agency',
@@ -19,6 +20,11 @@ export class AccountAgencyComponent {
   image="https://i.pinimg.com/originals/1b/e3/d9/1be3d94da55cf6348014713835811b3b.jpg";
 
 
+  constructor(private router: Router) { }
+
+  redirectToChangePassword() {
+    this.router.navigate(['/account-change-password']);
+  }
 
   changeEditable() {
     this.isEditable = !this.isEditable;

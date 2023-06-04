@@ -72,7 +72,7 @@
       </div>
 
       <div class="editButtons">
-        <button class="editProfile" mat-raised-button *ngIf="!isEditable">Change password</button>
+        <button class="editProfile" mat-raised-button *ngIf="!isEditable" (click)="redirectToChangePassword()">Change password</button>
         <button class="editProfile" mat-raised-button *ngIf="!isEditable" (click)="changeEditable()" >Update</button>
       </div>
 
