@@ -5,7 +5,7 @@ import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import { HomeComponent } from './common/home/home.component';
 import { AccountComponent } from './components/account/account.component';
 import { AccountAgencyComponent } from './agency/account-agency/account-agency.component';
-import {ChangePasswordComponent} from "./components/change-password/change-password.component";
+import {ChangePasswordComponent} from "./agency/change-password/change-password.component";
 
 
 
