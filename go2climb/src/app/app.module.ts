@@ -25,6 +25,7 @@ import { ChangePasswordComponent } from './agency/change-password/change-passwor
 import {MatStepperModule} from "@angular/material/stepper";
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
+import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { PaymentDetailsComponent } from './agency/payment-details/payment-detail
     SignInComponent,
     ChangePasswordComponent,
     UpgradePlansComponent,
-    PaymentDetailsComponent
+    PaymentDetailsComponent,
+    PageNotFoundComponent
 
   ],
   imports: [
