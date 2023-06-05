@@ -23,6 +23,7 @@ import {AuthService} from "./security/service/auth.service";
 import { SignUpTouristComponent } from './security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component';
 import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component';
 import {MatRadioModule} from "@angular/material/radio";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {MatRadioModule} from "@angular/material/radio";
     MatIconModule,
     HttpClientModule,
     FormsModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCheckboxModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -10,8 +10,8 @@ import {AuthService} from "../../service/auth.service";
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-  isTourist = false;
-  types: string[] = ['Tourist', 'Agency'];
+  types = ['tourist', 'agency'];
+  typeSelect = ''
 
   constructor(private builder: FormBuilder, private service: AuthService,
               private router: Router) {
@@ -43,6 +43,13 @@ export class SignInComponent {
       });
     } else {
       alert('Please enter valid data.')
+    }
+  }
+
+  placeRegister(){
+    switch (this.typeSelect) {
+      case 'tourist' : this.router.navigate(['sign-up-tourist']); break;
+      case 'agency' : this.router.navigate(['sign-up-agency']); break;
     }
   }
 

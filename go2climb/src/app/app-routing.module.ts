@@ -12,7 +12,8 @@ import {SignUpAgencyComponent} from "./security/pages/sign-up/agency/sign-up-age
 const routes: Routes = [
   {path: 'sign-in',  component: SignInComponent},
   {path: '',  component: SignInComponent},
-  {path: 'sign-up',  component: SignUpTouristComponent},
+  {path: 'sign-up-tourist',  component: SignUpTouristComponent},
+  {path: 'sign-up-agency',  component: SignUpAgencyComponent},
   {path: 'home',  component: HomeComponent},
   {path: 'account',  component: AccountComponent},
   {path: 'account-agency',  component: AccountAgencyComponent},
