@@ -24,6 +24,7 @@ import {AuthService} from "./security/service/auth.service";
 import { ChangePasswordComponent } from './agency/change-password/change-password.component';
 import {MatStepperModule} from "@angular/material/stepper";
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
+import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.comp
     AccountComponent,
     SignInComponent,
     ChangePasswordComponent,
-    UpgradePlansComponent
+    UpgradePlansComponent,
+    PaymentDetailsComponent
 
   ],
   imports: [

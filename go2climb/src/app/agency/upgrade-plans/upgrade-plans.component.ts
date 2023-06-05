@@ -10,6 +10,8 @@ export class UpgradePlansComponent {
 
   constructor(private router:Router) {}
 
-
+  redirectToPaymentDetails(){
+    this.router.navigate(['account-payment-details']);
+  }
 
 }
