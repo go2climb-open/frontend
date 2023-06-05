@@ -25,6 +25,9 @@ export class AccountAgencyComponent {
   redirectToChangePassword() {
     this.router.navigate(['/account-change-password']);
   }
+  redirectToUpgradePlans(){
+    this.router.navigate(['account-upgrade-plan']);
+  }
 
   changeEditable() {
     this.isEditable = !this.isEditable;
@@ -54,7 +57,5 @@ export class AccountAgencyComponent {
     }
 
   }
-
-
 
 }

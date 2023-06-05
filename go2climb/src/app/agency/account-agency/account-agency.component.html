@@ -17,7 +17,7 @@
       </div>
 
       <div class="button-upgrade-plan">
-        <button mat-raised-button *ngIf="!isEditable">Upgrade</button>
+        <button mat-raised-button *ngIf="!isEditable" (click)="redirectToUpgradePlans()">Upgrade</button>
       </div>
 
     </div>

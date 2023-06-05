@@ -17,6 +17,7 @@ export class ChangePasswordComponent implements OnInit {
   redirectToProfile(){
     this.router.navigate(['account-agency']);
   }
+
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required]
