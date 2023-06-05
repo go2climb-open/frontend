@@ -11,7 +11,7 @@ export class HomeComponent implements  OnInit {
 
   services: Iservice[] = []
   value = '';
-  userType: boolean = true;
+  userType: string = 'agency';
 
   constructor(private servicesService: ServicesService) { }
 
