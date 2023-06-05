@@ -1,0 +1,52 @@
+<div class="header" style="display: flex; justify-content: space-between;">
+  <div style="padding-left: 5%; padding-top: 1%;">
+    <h1 style="font-weight: bold; color: #356F80;">Results</h1>
+  </div>
+</div>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Filters </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h3>Price Range</h3>
+          <mat-slider
+          [max]="max"
+          [min]="min"
+          [step]="1"
+          >
+            <input matSliderStartThumb [(ngModel)]="minPrice">
+            <input matSliderEndThumb [(ngModel)]="maxPrice">
+          </mat-slider>
+
+          <div style="display: flex; justify-content: space-around;">
+            <p style="font-weight: bold;"> min: $ {{minPrice}} </p>
+            <p style="font-weight: bold;">max: $ {{maxPrice}} </p>
+          </div>
+
+          <h3>Rating</h3>
+
+          <mat-slider
+          [max]=5
+          [min]=0
+          [step]="0.5"
+          >
+            <input matSliderThumb [(ngModel)]="rating">
+          </mat-slider>
+          <div style="display: flex; justify-content: center;">
+            <p style="font-weight: bold;"> {{rating}} <mat-icon class="star">grade</mat-icon></p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div style="display: flex; justify-content: center;">
+          <button mat-button style="background-color: #5D97A8; color: azure;">filter</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container>
+

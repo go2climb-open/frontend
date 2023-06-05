@@ -1,0 +1,31 @@
+.example-container {
+  width: auto;
+  height: 77%;
+  margin: 10px;
+ }
+
+.example-card {
+  margin: 10px;
+  width: 350px;
+}
+
+
+mat-slider {
+  width: 300px;
+}
+
+.star{
+  color: goldenrod;
+}
+
+.mat-slider-thumb {
+	background-color: #AAAAAA !important;
+}
+
+.mat-slider-thumb-label {
+	background-color: #AAAAAA !important;
+}
+
+.mat-slider-track-fill {
+	background-color: #AAAAAA !important;
+}

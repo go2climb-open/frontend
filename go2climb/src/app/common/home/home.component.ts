@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Iservice } from 'src/app/models/service';
 import { ServicesService } from 'src/app/services/services-service.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,7 +15,7 @@ export class HomeComponent implements  OnInit {
   value = '';
   userType: string = 'agency';
 
-  constructor(private servicesService: ServicesService) { }
+  constructor(private servicesService: ServicesService, private router: Router) { }
 
 
   ngOnInit() {
@@ -36,6 +38,7 @@ export class HomeComponent implements  OnInit {
 
   search(value: String){
     console.log('searching '+value);
+    this.router.navigate(['/search',value]);
   }
 
 }

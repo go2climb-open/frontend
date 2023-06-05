@@ -40,4 +40,9 @@ export class ServicesService {
     .pipe(retry(1), catchError(this.handleError));
   }
 
+  searchService(name: String): Observable<Iservice[]>{
+    return this.http.get<Iservice[]>(this.basePath+ `?name_like=${name}`, this.httpOptions)
+    .pipe(retry(1), catchError(this.handleError));
+  }
+
 }
