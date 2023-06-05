@@ -10,6 +10,9 @@ import {AuthService} from "../../service/auth.service";
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
+  isTourist = false;
+  types: string[] = ['Tourist', 'Agency'];
+
   constructor(private builder: FormBuilder, private service: AuthService,
               private router: Router) {
     sessionStorage.clear();
@@ -42,5 +45,6 @@ export class SignInComponent {
       alert('Please enter valid data.')
     }
   }
+
 }
 

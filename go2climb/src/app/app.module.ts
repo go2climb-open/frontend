@@ -13,7 +13,6 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { AccountAgencyComponent } from './agency/account-agency/account-agency.component';
-import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './common/home/home.component';
 import  { MatIconModule } from "@angular/material/icon";
@@ -23,6 +22,7 @@ import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import {AuthService} from "./security/service/auth.service";
 import { SignUpTouristComponent } from './security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component';
 import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component';
+import {MatRadioModule} from "@angular/material/radio";
 
 
 @NgModule({
@@ -31,7 +31,6 @@ import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-a
     HeaderComponent,
     FooterComponent,
     AccountAgencyComponent,
-    SignUpComponent,
     HomeComponent,
     AccountComponent,
     SignInComponent,
@@ -54,7 +53,8 @@ import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-a
     MatSelectModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
