@@ -16,11 +16,11 @@
 <mat-grid-list cols="3" rowHeight="390px">
   <mat-grid-tile *ngFor="let service of services" style="display: flex;">
     <mat-card class="service-card" (click)="serviceDetail()">
-      <img mat-card-image src="https://www.rei.com/assets/adventures/images/homepage/about/about-uncommon-tile/live.jpg" class="card-img" alt="Photo of a Shiba Inu">
+      <img mat-card-image src={{service.img_url}} class="card-img" alt="Photo of a Shiba Inu">
       <mat-card-content>
-        <mat-card-title>Tour Lunahuna</mat-card-title>
-        <mat-card-subtitle style="margin-left: 50px;">Lima</mat-card-subtitle>
-        <p style="margin-left: 50px;"> 150$ </p>
+        <mat-card-title>{{service.name}}</mat-card-title>
+        <mat-card-subtitle style="display: flex; justify-content: center;">{{service.location}}</mat-card-subtitle>
+        <p style="display: flex; justify-content: center;"> {{service.price + "$"}} </p>
       </mat-card-content>
     </mat-card>
  </mat-grid-tile>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Iservice } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services-service.service';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements  OnInit {
 
-  services: any[] = [1,2,3,4,5,6];
+  services: Iservice[] = []
   value = '';
   userType: boolean = true;
-  constructor() { }
+
+  constructor(private servicesService: ServicesService) { }
 
 
   ngOnInit() {
+    this.fetchServices();
+
   }
+
+  fetchServices(){
+    this.servicesService.getServices().subscribe(
+      (data) => {
+        this.services = data;
+        console.log(this.services);
+
+      })
+    }
 
   serviceDetail(){
     console.log('servicedetail');
