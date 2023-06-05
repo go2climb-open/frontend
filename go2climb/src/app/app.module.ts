@@ -21,6 +21,8 @@ import  { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
 import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import {AuthService} from "./security/service/auth.service";
+import { SignUpTouristComponent } from './security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component';
+import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import {AuthService} from "./security/service/auth.service";
     SignUpComponent,
     HomeComponent,
     AccountComponent,
-    SignInComponent
+    SignInComponent,
+    SignUpTouristComponent,
+    SignUpAgencyComponent
 
   ],
   imports: [

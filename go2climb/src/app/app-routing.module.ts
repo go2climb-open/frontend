@@ -5,13 +5,15 @@ import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import { HomeComponent } from './common/home/home.component';
 import { AccountComponent } from './components/account/account.component';
 import { AccountAgencyComponent } from './agency/account-agency/account-agency.component';
+import {SignUpTouristComponent} from "./security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component";
+import {SignUpAgencyComponent} from "./security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component";
 
 
 
 const routes: Routes = [
   {path: 'sign-in',  component: SignInComponent},
   {path: '',  component: SignInComponent},
-  {path: 'sign-up',  component: SignUpComponent},
+  {path: 'sign-up',  component: SignUpTouristComponent},
   {path: 'home',  component: HomeComponent},
   {path: 'account',  component: AccountComponent},
   {path: 'account-agency',  component: AccountAgencyComponent},
