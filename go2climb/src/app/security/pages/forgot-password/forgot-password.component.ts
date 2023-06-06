@@ -21,6 +21,10 @@ export class ForgotPasswordComponent implements OnInit{
     })
   }
 
+  redirectToSignIn(){
+    this.router.navigate(['sign-in']);
+  }
+
   ngOnInit(): void {
   }
 
