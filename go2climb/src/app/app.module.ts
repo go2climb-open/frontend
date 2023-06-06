@@ -25,6 +25,7 @@ import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-a
 import {MatRadioModule} from "@angular/material/radio";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot-password.component';
+import {MatStepperModule} from "@angular/material/stepper";
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot
     HttpClientModule,
     FormsModule,
     MatRadioModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
