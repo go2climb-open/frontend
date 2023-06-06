@@ -24,6 +24,7 @@ import { SignUpTouristComponent } from './security/pages/sign-up/tourist/sign-up
 import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component';
 import {MatRadioModule} from "@angular/material/radio";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     AccountComponent,
     SignInComponent,
     SignUpTouristComponent,
-    SignUpAgencyComponent
+    SignUpAgencyComponent,
+    ForgotPasswordComponent
 
   ],
   imports: [
