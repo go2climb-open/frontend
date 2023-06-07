@@ -18,14 +18,4 @@ mat-slider {
   color: goldenrod;
 }
 
-.mat-slider-thumb {
-	background-color: #AAAAAA !important;
-}
 
-.mat-slider-thumb-label {
-	background-color: #AAAAAA !important;
-}
-
-.mat-slider-track-fill {
-	background-color: #AAAAAA !important;
-}
