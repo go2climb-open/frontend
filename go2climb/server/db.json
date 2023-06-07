@@ -47,6 +47,18 @@
       "priceOffer": 0,
       "agency_id": 2,
       "score": 4
+    },
+    {
+      "id": 5,
+      "name": "Aventura",
+      "price": 500,
+      "location": "prueba",
+      "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Bosque_de_Piedras_de_Hatun_Machay.jpg/1200px-Bosque_de_Piedras_de_Hatun_Machay.jpg",
+      "description": "Lorem ipsum dolor",
+      "isOffer": false,
+      "priceOffer": 0,
+      "agency_id": 2,
+      "score": 4
     }
 
   ],
