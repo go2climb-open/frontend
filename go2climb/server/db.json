@@ -10,24 +10,24 @@
       "isOffer": false,
       "priceOffer": 0,
       "agency_id": 1,
-      "score": 4
+      "score": 3
     },
     {
       "id": 2,
       "name": "Prueba 2",
-      "price": 200,
+      "price": 250,
       "location": "Cuzco",
       "img_url": "https://www.exoticca.com/es/blog/wp-content/uploads/2019/10/No-sabes-qu%C3%A9-ver-en-Cuzco_Nosotros-te-guiamos.jpg",
       "description": "Lorem ipsum dolor",
       "isOffer": false,
       "priceOffer": 0,
       "agency_id": 1,
-      "score": 4
+      "score": 3
     },
     {
       "id": 3,
       "name": "Prueba 3",
-      "price": 200,
+      "price": 300,
       "location": "Alpamayo",
       "img_url": "https://andeanrajuexpeditions.com/wp-content/uploads/2021/05/Alpamayo-la-montana-mas-hermosa.jpg",
       "description": "Lorem ipsum dolor",
@@ -39,13 +39,13 @@
     {
       "id": 4,
       "name": "Prueba 4",
-      "price": 200,
+      "price": 500,
       "location": "Hatun Machay",
       "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Bosque_de_Piedras_de_Hatun_Machay.jpg/1200px-Bosque_de_Piedras_de_Hatun_Machay.jpg",
       "description": "Lorem ipsum dolor",
       "isOffer": false,
       "priceOffer": 0,
-      "agency_id": 1,
+      "agency_id": 2,
       "score": 4
     }
 
@@ -58,6 +58,19 @@
     "name": "Tourist extreme",
     "email": "data@hotmail.com",
     "description": "agencia 1",
+    "location": "Lima",
+    "password": "jijijija",
+    "ruc": "3432424",
+    "phoneNumber": "312321321",
+    "img_url": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-logo%2C-travel-company-logo-%281%29-design-template-bc9dcb1ca0e92d6394dea26418a87c8e_screen.jpg",
+    "type_user": "agency"
+  },
+  {
+    "score": 0,
+    "id": 2,
+    "name": "Prueba agencia",
+    "email": "agencia@hotmail.com",
+    "description": "agencia prueba",
     "location": "Lima",
     "password": "jijijija",
     "ruc": "3432424",

@@ -1,6 +1,6 @@
 export interface agency {
-  score: Number,
-  id: Number,
+  score: number,
+  id: number,
   name: String,
   email: String,
   description: String,

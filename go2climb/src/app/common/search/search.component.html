@@ -26,7 +26,7 @@
             <p style="font-weight: bold;">max: $ {{maxPrice}} </p>
           </div>
 
-          <h3>Rating</h3>
+          <h3>Min Rating</h3>
 
           <mat-slider
           [max]=5
@@ -38,15 +38,43 @@
           <div style="display: flex; justify-content: center;">
             <p style="font-weight: bold;"> {{rating}} <mat-icon class="star">grade</mat-icon></p>
           </div>
+
+          <div style="display: flex; justify-content: space-between;">
+            <button mat-button style="background-color: #5D97A8; color: azure;" (click)="filterResults()">filter</button>
+            <button mat-button style="background-color: #5D97A8; color: azure;" (click)="clear()">clear</button>
+            </div>
         </mat-card-content>
-        <mat-card-actions>
-          <div style="display: flex; justify-content: center;">
-          <button mat-button style="background-color: #5D97A8; color: azure;">filter</button>
-          </div>
-        </mat-card-actions>
+
+
+
       </mat-card>
     </div>
   </mat-drawer>
-  <mat-drawer-content>Main content</mat-drawer-content>
+  <mat-drawer-content style="background-color: azure; padding-left: 10px;">
+    <mat-card class="result-container" *ngFor="let result of filtered">
+        <mat-card-content>
+          <div style="display: flex; padding-top: 10px; padding-bottom: 10px;">
+            <img mat-card-sm-image src="{{result.img_url}}" class="card-img">
+            <div  style="margin-left: 25px;">
+              <mat-card-title>{{result.name}}</mat-card-title>
+              <div style="display:flex; padding-top: 10px;">
+                <mat-card-subtitle style="padding-right: 50px;">Offered by: {{result.agency_id}} </mat-card-subtitle>
+                <mat-card-subtitle style="padding-right: 50px;">Location: {{result.location}}</mat-card-subtitle>
+                <mat-card-subtitle>Price: {{result.price}}</mat-card-subtitle>
+              </div>
+              <div>
+                <mat-card-subtitle>score: {{result.score}}<mat-icon class="star">grade</mat-icon></mat-card-subtitle>
+              </div>
+            </div>
+          </div>
+
+        </mat-card-content>
+    </mat-card>
+    <mat-card *ngIf="filtered.length == 0" class="no-result">
+      <div style="display: flex; justify-content: center;">
+        <h1 style="color: #356F80; font-weight: bold;">No matches found</h1>
+      </div>
+    </mat-card>
+  </mat-drawer-content>
 </mat-drawer-container>
 

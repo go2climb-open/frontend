@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Iservice } from 'src/app/models/service';
+import { AgencyService } from 'src/app/services/agency-service.service';
 import { ServicesService } from 'src/app/services/services-service.service';
 
 @Component({
@@ -14,6 +15,9 @@ export class SearchComponent implements OnInit {
 
   searchWord : any;
   results: Iservice[] = [];
+  agency: String[] = [];
+  filtered : Iservice[] = [];
+
 
   max = 1000;
   min = 0;
@@ -41,12 +45,21 @@ export class SearchComponent implements OnInit {
     return this.servicesService.searchService(this.searchWord)
     .subscribe(data => {
       this.results = data;
-      console.log(this.results);
+      this.filtered = this.results;
+      //console.log(this.results);
+      //console.log(this.filtered);
     })
-
   }
 
-
+  filterResults(){
+    this.filtered = this.results.filter(result => {
+      return result.score >= this.rating && result.price>=this.minPrice && result.price<=this.maxPrice;
+    })
+    //console.log(this.filtered);
+  }
+  clear(){
+    this.filtered = this.results;
+  }
 
 }
 

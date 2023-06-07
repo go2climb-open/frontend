@@ -1,12 +1,12 @@
 export interface Iservice {
-  id: Number,
+  id: number,
   name: String,
-  price: Number,
+  price: number,
   location: String,
   img_url: String,
   description: String,
   isOffer: boolean,
-  priceOffer: Number,
-  agency_id: Number,
-  score: Number
+  priceOffer: number,
+  agency_id: number,
+  score: number
 }

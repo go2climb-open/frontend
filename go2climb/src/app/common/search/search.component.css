@@ -18,4 +18,15 @@ mat-slider {
   color: goldenrod;
 }
 
+.results-container{
+  width:100%;
+}
 
+.card-img{
+  width: 200px;
+  height: 150px;
+}
+
+.no-results{
+  width: 100%;
+}
