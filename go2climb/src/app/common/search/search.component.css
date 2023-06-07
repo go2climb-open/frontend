@@ -18,8 +18,10 @@ mat-slider {
   color: goldenrod;
 }
 
-.results-container{
+.result-container{
   width:100%;
+  border: 1px solid #356f805b;
+  margin-top: 5px;
 }
 
 .card-img{
