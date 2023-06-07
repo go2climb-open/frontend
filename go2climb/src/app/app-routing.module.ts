@@ -10,6 +10,7 @@ import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.comp
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 import { AddServiceComponent } from 'src/app/agency/agency-service/pages/add-service-form/add-service.component';
+import { ServiceDetailsComponent } from 'src/app/agency/agency-service/pages/service-details/service-details.component';
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'account-upgrade-plan', component: UpgradePlansComponent },
   { path: 'account-payment-details', component: PaymentDetailsComponent },
   { path: 'add-service', component: AddServiceComponent },
+  { path: 'service-detail/:id', component: ServiceDetailsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -29,6 +29,7 @@ import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.comp
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 import { AddServiceComponent } from './agency/agency-service/pages/add-service-form/add-service.component';
+import { ServiceDetailsComponent } from './agency/agency-service/pages/service-details/service-details.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AddServiceComponent } from './agency/agency-service/pages/add-service-f
     PaymentDetailsComponent,
     PageNotFoundComponent,
     AddServiceComponent,
+    ServiceDetailsComponent,
   ],
   imports: [
     BrowserModule,
