@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { AddServiceService } from 'src/app/agency/add-service/service/add-service.service';
+import { AgencyServiceService } from 'src/app/agency/agency-service/service/agency-service.service';
 
 @Component({
   selector: 'app-add-service',
@@ -10,7 +10,7 @@ import { AddServiceService } from 'src/app/agency/add-service/service/add-servic
 export class AddServiceComponent {
   constructor(
     private formBuilder: FormBuilder,
-    private addServiceService: AddServiceService
+    private agencyServiceService: AgencyServiceService
   ) {}
 
   serviceForm = this.formBuilder.group({
@@ -23,6 +23,6 @@ export class AddServiceComponent {
 
   addService() {
     console.log(this.serviceForm.value);
-    this.addServiceService.addService(this.serviceForm.value);
+    this.agencyServiceService.addService(this.serviceForm.value);
   }
 }

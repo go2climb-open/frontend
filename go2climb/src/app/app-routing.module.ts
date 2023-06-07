@@ -9,7 +9,7 @@ import { ChangePasswordComponent } from './agency/change-password/change-passwor
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
-import { AddServiceComponent } from 'src/app/agency/add-service/pages/add-service-form/add-service.component';
+import { AddServiceComponent } from 'src/app/agency/agency-service/pages/add-service-form/add-service.component';
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },

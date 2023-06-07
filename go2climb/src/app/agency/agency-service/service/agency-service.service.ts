@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class AddServiceService {
+export class AgencyServiceService {
   constructor(private http: HttpClient) {}
 
   apiUrl = 'http://localhost:3000/service/';

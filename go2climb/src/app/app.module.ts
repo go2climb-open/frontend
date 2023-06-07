@@ -28,8 +28,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
-import { AddServiceComponent } from './agency/add-service/pages/add-service-form/add-service.component';
-import { AddServiceService } from 'src/app/agency/add-service/service/add-service.service';
+import { AddServiceComponent } from './agency/agency-service/pages/add-service-form/add-service.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +66,7 @@ import { AddServiceService } from 'src/app/agency/add-service/service/add-servic
     FormsModule,
     MatStepperModule,
   ],
-  providers: [AuthService, MatDatepickerModule, AddServiceService],
+  providers: [AuthService, MatDatepickerModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
