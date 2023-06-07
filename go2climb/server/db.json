@@ -1,0 +1,12 @@
+{
+  "service": [
+    {
+      "title": "Test",
+      "description": "Test",
+      "price": "20",
+      "place": "test",
+      "date": "2023-06-07T05:00:00.000Z",
+      "id": 1
+    }
+  ]
+}
