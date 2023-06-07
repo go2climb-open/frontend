@@ -1,3 +1,20 @@
 {
-  "service": []
+  "service": [
+    {
+      "title": "Testeado",
+      "description": "Una descripcion de prueba",
+      "price": "123",
+      "place": "Lima",
+      "date": "2023-06-16T05:00:00.000Z",
+      "id": 1
+    },
+    {
+      "title": "Prueba 2",
+      "description": "Test",
+      "price": "123",
+      "place": "Alla",
+      "date": "2023-06-21T05:00:00.000Z",
+      "id": 2
+    }
+  ]
 }

@@ -15,7 +15,7 @@ export class AgencyServiceService {
   }
 
   addService(service: any) {
-    return this.http.post(this.apiUrl, service).subscribe();
+    return this.http.post(this.apiUrl, service);
   }
 
   deleteService(id: number) {

@@ -41,4 +41,8 @@ export class ServiceDetailsComponent implements OnInit {
       });
     });
   }
+
+  handleGoToEdit(): void {
+    this.router.navigate(['/add-service', this.currentService?.id]);
+  }
 }

@@ -3,7 +3,7 @@
     <h2>{{ currentService?.title }}</h2>
 
     <div>
-      <button mat-raised-button>Edit</button>
+      <button mat-raised-button (click)="handleGoToEdit()">Edit</button>
       <button mat-raised-button color="warn" (click)="handleDeleteService()">
         Delete
       </button>

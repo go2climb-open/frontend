@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'account-upgrade-plan', component: UpgradePlansComponent },
   { path: 'account-payment-details', component: PaymentDetailsComponent },
   { path: 'add-service', component: AddServiceComponent },
+  { path: 'add-service/:id', component: AddServiceComponent },
   { path: 'service-detail/:id', component: ServiceDetailsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
