@@ -27,6 +27,9 @@ import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.comp
 import { SearchComponent } from './common/search/search.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatSliderModule} from "@angular/material/slider";
+import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
+import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import {MatSliderModule} from "@angular/material/slider";
     SignInComponent,
     ChangePasswordComponent,
     UpgradePlansComponent,
-    SearchComponent
+    SearchComponent,
+    PaymentDetailsComponent,
+    PageNotFoundComponent
 
   ],
   imports: [
