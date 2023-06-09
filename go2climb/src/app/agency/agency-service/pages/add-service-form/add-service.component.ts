@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AgencyServiceService } from 'src/app/agency/agency-service/service/agency-service.service';
 
@@ -16,6 +16,9 @@ export class AddServiceComponent implements OnInit {
     location: '',
   });
 
+  imageURLInput = new FormControl('');
+  img_url: string | null = '../../../assets/user-icon.webp';
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -30,7 +33,8 @@ export class AddServiceComponent implements OnInit {
       this.agencyServiceService
         .getServiceById(params['id'])
         .subscribe((service: any) => {
-          this.serviceForm.setValue(service);
+          this.serviceForm.setValue({ ...service });
+          this.img_url = service.img_url;
         });
     });
   }
@@ -38,7 +42,11 @@ export class AddServiceComponent implements OnInit {
   addService() {
     console.log(this.serviceForm.value);
     this.agencyServiceService
-      .addService(this.serviceForm.value)
+      .addService({ ...this.serviceForm.value, img_url: this.img_url })
       .subscribe(() => this.router.navigate(['/home']));
+  }
+
+  handleUploadPhoto() {
+    this.img_url = this.imageURLInput.value;
   }
 }
