@@ -26,6 +26,14 @@ import {MatRadioModule} from "@angular/material/radio";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot-password.component';
 import {MatStepperModule} from "@angular/material/stepper";
+import { ChangePasswordComponent } from './agency/change-password/change-password.component';
+import {MatStepperModule} from "@angular/material/stepper";
+import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
+import { SearchComponent } from './common/search/search.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatSliderModule} from "@angular/material/slider";
+import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
+import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -39,7 +47,12 @@ import {MatStepperModule} from "@angular/material/stepper";
     SignInComponent,
     SignUpTouristComponent,
     SignUpAgencyComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ChangePasswordComponent,
+    UpgradePlansComponent,
+    SearchComponent,
+    PaymentDetailsComponent,
+    PageNotFoundComponent
 
   ],
   imports: [
@@ -60,7 +73,9 @@ import {MatStepperModule} from "@angular/material/stepper";
     FormsModule,
     MatRadioModule,
     MatCheckboxModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSidenavModule,
+    MatSliderModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

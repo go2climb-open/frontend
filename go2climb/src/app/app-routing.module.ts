@@ -7,6 +7,12 @@ import { AccountAgencyComponent } from './agency/account-agency/account-agency.c
 import {SignUpTouristComponent} from "./security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component";
 import {SignUpAgencyComponent} from "./security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component";
 import {ForgotPasswordComponent} from "./security/pages/forgot-password/forgot-password.component";
+import {ChangePasswordComponent} from "./agency/change-password/change-password.component";
+import {UpgradePlansComponent} from "./agency/upgrade-plans/upgrade-plans.component";
+import { SearchComponent } from './common/search/search.component';
+import {PaymentDetailsComponent} from "./agency/payment-details/payment-details.component";
+import {PageNotFoundComponent} from "./common/page-not-found/page-not-found.component";
+
 
 
 
@@ -19,6 +25,11 @@ const routes: Routes = [
   {path: 'home',  component: HomeComponent},
   {path: 'account',  component: AccountComponent},
   {path: 'account-agency',  component: AccountAgencyComponent},
+  {path: 'account-change-password',  component: ChangePasswordComponent},
+  {path:'account-upgrade-plan', component:UpgradePlansComponent},
+  {path: 'search/:text', component: SearchComponent},
+  {path:'account-payment-details', component:PaymentDetailsComponent},
+  {path:'**', component:PageNotFoundComponent}
 ];
 
 @NgModule({

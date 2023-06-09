@@ -1,22 +1,31 @@
 <mat-grid-list class="card" cols="4" rowHeight="100%">
 
-  <mat-grid-tile
+  <mat-grid-tile class="mat-grid-title-first"
     [colspan]="1"
     [rowspan]="1"
-    [style.background]="'transparent'">
+    [style.background]="'transparent'"
+  >
     <div class="profile">
       <img  mat-card-avatar class="profilePhoto" [src]="image" alt="User Avatar">
 
-      <button class="upload-photoButton" mat-raised-button
-              *ngIf="isEditable"
-              (click)="uploadPhoto()">Upload Photo</button>
-      <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden>
+      <div class="button-upload-content">
+        <button class="upload-photoButton" mat-raised-button
+                *ngIf="isEditable"
+                (click)="uploadPhoto()">Upload Photo</button>
+        <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden>
+
+      </div>
+
+      <div class="button-upgrade-plan">
+        <button mat-raised-button *ngIf="!isEditable" (click)="redirectToUpgradePlans()">Upgrade</button>
+      </div>
 
     </div>
 
 
+
   </mat-grid-tile>
-  <mat-grid-tile
+  <mat-grid-tile class="mat-grid-tile-second"
     [colspan]="2"
     [rowspan]="1"
     [style.background]="'transparent'">
@@ -72,7 +81,7 @@
       </div>
 
       <div class="editButtons">
-        <button class="editProfile" mat-raised-button *ngIf="!isEditable">Change password</button>
+        <button class="editProfile" mat-raised-button *ngIf="!isEditable" (click)="redirectToChangePassword()">Change password</button>
         <button class="editProfile" mat-raised-button *ngIf="!isEditable" (click)="changeEditable()" >Update</button>
       </div>
 
