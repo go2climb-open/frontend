@@ -59,36 +59,41 @@
       "priceOffer": 0,
       "agency_id": 2,
       "score": 4
+    },
+    {
+      "name": "Prueba ahora",
+      "description": "Descripcion del conflicto",
+      "price": "100",
+      "location": "Pisco",
+      "id": 6
     }
-
   ],
-
   "agencies": [
     {
-    "score": 0,
-    "id": 1,
-    "name": "Tourist extreme",
-    "email": "data@hotmail.com",
-    "description": "agencia 1",
-    "location": "Lima",
-    "password": "jijijija",
-    "ruc": "3432424",
-    "phoneNumber": "312321321",
-    "img_url": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-logo%2C-travel-company-logo-%281%29-design-template-bc9dcb1ca0e92d6394dea26418a87c8e_screen.jpg",
-    "type_user": "agency"
-  },
-  {
-    "score": 0,
-    "id": 2,
-    "name": "Prueba agencia",
-    "email": "agencia@hotmail.com",
-    "description": "agencia prueba",
-    "location": "Lima",
-    "password": "jijijija",
-    "ruc": "3432424",
-    "phoneNumber": "312321321",
-    "img_url": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-logo%2C-travel-company-logo-%281%29-design-template-bc9dcb1ca0e92d6394dea26418a87c8e_screen.jpg",
-    "type_user": "agency"
-  }
+      "score": 0,
+      "id": 1,
+      "name": "Tourist extreme",
+      "email": "data@hotmail.com",
+      "description": "agencia 1",
+      "location": "Lima",
+      "password": "jijijija",
+      "ruc": "3432424",
+      "phoneNumber": "312321321",
+      "img_url": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-logo%2C-travel-company-logo-%281%29-design-template-bc9dcb1ca0e92d6394dea26418a87c8e_screen.jpg",
+      "type_user": "agency"
+    },
+    {
+      "score": 0,
+      "id": 2,
+      "name": "Prueba agencia",
+      "email": "agencia@hotmail.com",
+      "description": "agencia prueba",
+      "location": "Lima",
+      "password": "jijijija",
+      "ruc": "3432424",
+      "phoneNumber": "312321321",
+      "img_url": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-logo%2C-travel-company-logo-%281%29-design-template-bc9dcb1ca0e92d6394dea26418a87c8e_screen.jpg",
+      "type_user": "agency"
+    }
   ]
 }

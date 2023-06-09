@@ -1,0 +1,134 @@
+<section>
+  <header>
+    <h2>{{ currentService?.name }}</h2>
+
+    <div>
+      <button mat-raised-button (click)="handleGoToEdit()">Edit</button>
+      <button mat-raised-button color="warn" (click)="handleDeleteService()">
+        Delete
+      </button>
+    </div>
+  </header>
+
+  <div class="container card">
+    <div class="pictures">
+      <img [src]="currentService?.img_url || defaultImage" alt="service" />
+
+      <div class="collage">
+        <img src="../../assets/river.png" alt="river" />
+        <img src="../../assets/downfall.png" alt="downfall" />
+        <img src="../../assets/boat.png" alt="boat" />
+        <img src="../../assets/camp.png" alt="camp" />
+      </div>
+    </div>
+
+    <div class="details">
+      <div class="profile">
+        <img src="../../assets/default_agency_logo.png" alt="agency_logo" />
+
+        <div class="name">
+          <strong>By: Peru travel</strong>
+        </div>
+      </div>
+
+      <div class="score">
+        Score: <mat-icon class="star">star</mat-icon>
+        <mat-icon class="star">star</mat-icon>
+        <mat-icon class="star">star</mat-icon>
+        <mat-icon class="star">star</mat-icon>
+        <mat-icon class="star">star</mat-icon>
+      </div>
+
+      <p>Price: S/. {{ currentService?.price }}</p>
+
+      <p>Location: {{ currentService?.location }}</p>
+    </div>
+
+    <div class="information">
+      <div class="service">
+        <div class="description">
+          <h3>Description:</h3>
+
+          <div class="card">
+            <p>{{ currentService?.description }}</p>
+          </div>
+        </div>
+
+        <div class="itinerary">
+          <h3>Itinerary:</h3>
+
+          <div class="card">
+            <p>
+              Activity 1: Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit.
+            </p>
+
+            <p>
+              Activity 2: Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit.
+            </p>
+
+            <p>
+              Activity 3: Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews">
+        <h3>Reviews:</h3>
+
+        <div class="card">
+          <div class="client">
+            <img
+              class="client-img"
+              src="../../../../../assets/user-icon.webp"
+              alt="client"
+            />
+
+            <div>
+              <h4>Jhon Doe</h4>
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+              nemo delectus sed nisi officia. Incidunt maiores facere aliquid
+              perferendis fugiat!
+            </div>
+          </div>
+
+          <div class="client">
+            <img
+              class="client-img"
+              src="../../../../../assets/user-icon.webp"
+              alt="client"
+            />
+
+            <div>
+              <h4>Jhon Doe</h4>
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+              nemo delectus sed nisi officia. Incidunt maiores facere aliquid
+              perferendis fugiat!
+            </div>
+          </div>
+
+          <div class="client">
+            <img
+              class="client-img"
+              src="../../../../../assets/user-icon.webp"
+              alt="client"
+            />
+
+            <div>
+              <h4>Jhon Doe</h4>
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+              nemo delectus sed nisi officia. Incidunt maiores facere aliquid
+              perferendis fugiat!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
