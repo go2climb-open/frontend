@@ -27,7 +27,6 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot-password.component';
 import {MatStepperModule} from "@angular/material/stepper";
 import { ChangePasswordComponent } from './agency/change-password/change-password.component';
-import {MatStepperModule} from "@angular/material/stepper";
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
 import { SearchComponent } from './common/search/search.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
