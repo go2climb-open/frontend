@@ -11,8 +11,6 @@ import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.comp
 import {SignUpTouristComponent} from "./security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component";
 import {SignUpAgencyComponent} from "./security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component";
 import {ForgotPasswordComponent} from "./security/pages/forgot-password/forgot-password.component";
-import {ChangePasswordComponent} from "./agency/change-password/change-password.component";
-import {UpgradePlansComponent} from "./agency/upgrade-plans/upgrade-plans.component";
 import { SearchComponent } from './common/search/search.component';
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
