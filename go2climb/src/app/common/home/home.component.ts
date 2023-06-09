@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Iservice } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services-service.service';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,13 +10,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  services: any[] = [1, 2, 3, 4, 5, 6];
+  services: Iservice[] = [];
   value = '';
-  userType: boolean = true;
+  userType: string = 'agency';
 
-  constructor(private router: Router) {}
+  constructor(
+    private servicesService: ServicesService,
+    private router: Router
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.fetchServices();
+  }
+
+  fetchServices() {
+    this.servicesService.getServices().subscribe((data) => {
+      this.services = data;
+      //console.log(this.services);
+    });
+  }
 
   serviceDetail() {
     console.log('servicedetail');
@@ -21,6 +36,7 @@ export class HomeComponent implements OnInit {
 
   search(value: String) {
     console.log('searching ' + value);
+    this.router.navigate(['/search', value]);
   }
 
   handleGoToAddService() {

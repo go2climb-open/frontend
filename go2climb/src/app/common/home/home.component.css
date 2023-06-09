@@ -1,6 +1,7 @@
 .service-card {
   max-width: 400px;
   min-width: 300px;
+  height: 400px;
   margin-bottom: 55px;
   align-items: center;
   justify-content: center;
@@ -9,7 +10,8 @@
 
 }
 .card-img{
-  max-width: 400px;
+  width: 350px;
+  object-fit: contain;
   padding: 15px;
 
 }
@@ -29,10 +31,15 @@
 
 #btn{
   position: fixed;
-  bottom: 15px;
+  bottom: 110px;
   right: 10px;
 }
 
 .mat-buttonSuccess{
   color: #356F80;
+}
+
+.star{
+  color: goldenrod;
+  margin-top: 2px;
 }
