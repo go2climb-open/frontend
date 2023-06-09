@@ -24,6 +24,9 @@ import {AuthService} from "./security/service/auth.service";
 import { ChangePasswordComponent } from './agency/change-password/change-password.component';
 import {MatStepperModule} from "@angular/material/stepper";
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
+import { SearchComponent } from './common/search/search.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatSliderModule} from "@angular/material/slider";
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 
@@ -40,6 +43,7 @@ import { PageNotFoundComponent } from './common/page-not-found/page-not-found.co
     SignInComponent,
     ChangePasswordComponent,
     UpgradePlansComponent,
+    SearchComponent,
     PaymentDetailsComponent,
     PageNotFoundComponent
 
@@ -60,7 +64,9 @@ import { PageNotFoundComponent } from './common/page-not-found/page-not-found.co
     MatIconModule,
     HttpClientModule,
     FormsModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSidenavModule,
+    MatSliderModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
