@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a0af4d59-2ae8-41f9-b064-a8c00bc8b4d1" name="Changes" comment="Add different registers [tourist and agency]">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QiMgRk42m5lRiJmLIbWN9wIAQO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/forgort__password__and__signup&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Clases/Ciclo 6/Desarrollo de Aplicaciones Open Source/Trabajos/TP/Ejemplo/Go2Climb&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Clases\\Ciclo 6\\Desarrollo de Aplicaciones Open Source\\Trabajos\\frontend\\go2climb\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0af4d59-2ae8-41f9-b064-a8c00bc8b4d1" name="Changes" comment="" />
+      <created>1685832059277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685832059277</updated>
+      <workItem from="1685832060527" duration="3140000" />
+      <workItem from="1685894853513" duration="42000" />
+      <workItem from="1685904311543" duration="5735000" />
+      <workItem from="1685918786000" duration="60000" />
+      <workItem from="1685918863498" duration="828000" />
+      <workItem from="1685938331447" duration="75000" />
+      <workItem from="1685966445135" duration="513000" />
+      <workItem from="1685966972054" duration="123000" />
+      <workItem from="1685967105817" duration="71000" />
+      <workItem from="1685967186306" duration="13737000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update sign-up">
+      <created>1685917892801</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685917892801</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update sign-up v2">
+      <created>1685985777319</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685985777319</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add different registers [tourist and agency]">
+      <created>1686002595838</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686002595838</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update sign-up" />
+    <MESSAGE value="Update sign-up v2" />
+    <MESSAGE value="Add different registers [tourist and agency]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add different registers [tourist and agency]" />
+  </component>
+</project>

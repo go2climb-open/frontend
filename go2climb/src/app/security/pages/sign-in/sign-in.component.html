@@ -13,14 +13,17 @@
           <mat-label>Password</mat-label>
           <input matInput type="password" formControlName="password" >
         </mat-form-field>
-
-        <div>
+        <div style="justify-content: space-between; flex-direction: row; display: flex">
           <button mat-raised-button color="primary">Sign In</button>
-        </div>
-        <div>
-          <a routerLink="/sign-up" mat-raised-button color="accent">Don't have an account? Sign Up</a>
+          <a [routerLink]="'/forgot-password'">Forgot password?</a>
         </div>
       </form>
+      <div>
+        <a (click)="placeRegister()" mat-raised-button color="accent">Don't have an account? Sign Up</a>
+      </div>
+      <mat-radio-group name="options" aria-label="Select an option" [(ngModel)]="typeSelect">
+        <mat-radio-button *ngFor="let type of types" name="options" [value]="type">{{type}}</mat-radio-button>
+      </mat-radio-group>
     </mat-card-content>
   </mat-card>
 </div>
