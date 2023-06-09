@@ -59,9 +59,15 @@
       "priceOffer": 0,
       "agency_id": 2,
       "score": 4
+    },
+    {
+      "name": "Prueba ahora",
+      "description": "Descripcion del conflicto",
+      "price": "100",
+      "location": "Pisco",
+      "id": 6
     }
   ],
-
   "agencies": [
     {
       "score": 0,

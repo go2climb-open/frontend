@@ -51,7 +51,7 @@
 
 <div *ngIf="userType == 'agency'" style="display: flex; justify-content: end">
   <div style="margin-right: 5%" id="btn">
-    <button mat-fab extended class="add-btn">
+    <button mat-fab extended (click)="handleGoToAddService()" class="add-btn">
       <mat-icon>add</mat-icon>Add
     </button>
   </div>

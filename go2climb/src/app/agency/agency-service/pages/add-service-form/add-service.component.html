@@ -20,7 +20,7 @@
       >
         <mat-form-field class="example-full-width">
           <mat-label>Title</mat-label>
-          <input matInput formControlName="title" />
+          <input matInput formControlName="name" />
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
@@ -35,15 +35,15 @@
 
         <mat-form-field class="example-full-width">
           <mat-label>Place</mat-label>
-          <input matInput formControlName="place" />
+          <input matInput formControlName="location" />
         </mat-form-field>
 
-        <mat-form-field class="example-full-width">
+        <!-- <mat-form-field class="example-full-width">
           <mat-label>Date</mat-label>
           <input matInput formControlName="date" [matDatepicker]="picker" />
           <mat-datepicker-toggle matIconSuffix [for]="picker" />
           <mat-datepicker #picker />
-        </mat-form-field>
+        </mat-form-field> -->
 
         <div class="actions">
           <button mat-flat-button color="primary">Add</button>

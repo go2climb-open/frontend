@@ -1,9 +1,13 @@
 export interface AgencyService {
-  title: string;
+  name: string;
   description: string;
-  price: string;
-  place: string;
+  price: number;
+  location: string;
   date: string;
-  imageUrl: string;
+  img_url: string;
   id: number;
+  isOffer: boolean;
+  priceOffer: number;
+  agency_id: number;
+  score: number;
 }

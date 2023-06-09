@@ -10,11 +10,10 @@ import { AgencyServiceService } from 'src/app/agency/agency-service/service/agen
 })
 export class AddServiceComponent implements OnInit {
   serviceForm = this.formBuilder.group({
-    title: '',
+    name: '',
     description: '',
     price: '',
-    place: '',
-    date: '',
+    location: '',
   });
 
   constructor(
@@ -30,7 +29,7 @@ export class AddServiceComponent implements OnInit {
 
       this.agencyServiceService
         .getServiceById(params['id'])
-        .subscribe((service) => {
+        .subscribe((service: any) => {
           this.serviceForm.setValue(service);
         });
     });

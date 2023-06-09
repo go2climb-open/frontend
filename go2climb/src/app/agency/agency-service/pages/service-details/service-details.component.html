@@ -1,6 +1,6 @@
 <section>
   <header>
-    <h2>{{ currentService?.title }}</h2>
+    <h2>{{ currentService?.name }}</h2>
 
     <div>
       <button mat-raised-button (click)="handleGoToEdit()">Edit</button>
@@ -12,7 +12,7 @@
 
   <div class="container card">
     <div class="pictures">
-      <img [src]="currentService?.imageUrl || defaultImage" alt="service" />
+      <img [src]="currentService?.img_url || defaultImage" alt="service" />
 
       <div class="collage">
         <img src="../../assets/river.png" alt="river" />
@@ -41,7 +41,7 @@
 
       <p>Price: S/. {{ currentService?.price }}</p>
 
-      <p>Location: {{ currentService?.place }}</p>
+      <p>Location: {{ currentService?.location }}</p>
     </div>
 
     <div class="information">
