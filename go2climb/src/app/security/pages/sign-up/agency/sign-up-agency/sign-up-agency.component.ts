@@ -18,7 +18,8 @@ export class SignUpAgencyComponent implements OnInit{
       agencyName: this.builder.control('',Validators.compose([Validators.required])),
       phone: this.builder.control('',Validators.compose([Validators.required, Validators.maxLength(9)])),
       location: this.builder.control('',Validators.compose([Validators.required])),
-      ruc: this.builder.control('',Validators.compose([Validators.required]))
+      ruc: this.builder.control('',Validators.compose([Validators.required])),
+      userType:'agency'
     })
   }
 
@@ -50,8 +51,9 @@ export class SignUpAgencyComponent implements OnInit{
     if (this.signUpAgencyForm.valid) {
       this.service.RegisterUser(this.signUpAgencyForm.value).subscribe(result => {
         alert("Please contact admin for enable access.','Registered successfully")
-        this.router.navigate(['login'])
+        this.router.navigate(['sign-in'])
       });
+      console.log("im here baby")
     } else {
       alert("Please enter valid data.")
     }

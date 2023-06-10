@@ -21,24 +21,22 @@ export class SignInComponent {
   result: any;
 
   loginform = this.builder.group({
-    id: this.builder.control('', Validators.required),
+    email: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.required)
   });
 
   proceedlogin() {
     if (this.loginform.valid) {
-      this.service.GetUserbyCode(this.loginform.value.id).subscribe(item => {
+      this.service.GetUserByEmail(this.loginform.value.email).subscribe(item => {
         this.result = item;
-        if (this.result.password === this.loginform.value.password) {
-          if (this.result.isactive) {
-            sessionStorage.setItem('username',this.result.id);
-            sessionStorage.setItem('role',this.result.role);
-            this.router.navigate(['']);
-          } else {
-            alert('InActive User: Please contact Admin');
-          }
-        } else {
-          alert('Invalid credentials');
+        console.log(this.result)
+        if (this.result[0].password === this.loginform.value.password) {
+          sessionStorage.setItem('username',this.result[0].email);
+          sessionStorage.setItem('userType',this.result[0].userType);
+          console.log('aqui')
+          this.router.navigate(['home']);
+        }else {
+          alert('error ')
         }
       });
     } else {
@@ -52,6 +50,7 @@ export class SignInComponent {
       case 'agency' : this.router.navigate(['sign-up-agency']); break;
     }
   }
+
 
 }
 

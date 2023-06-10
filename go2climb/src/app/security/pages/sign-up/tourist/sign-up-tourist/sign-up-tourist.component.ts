@@ -17,7 +17,8 @@ export class SignUpTouristComponent implements OnInit{
       password: this.builder.control('',Validators.compose([Validators.required, Validators.minLength(8)])),
       name: this.builder.control('',Validators.compose([Validators.required])),
       phone: this.builder.control('',Validators.compose([Validators.required, Validators.maxLength(9)])),
-      location: this.builder.control('',Validators.compose([Validators.required]))
+      location: this.builder.control('',Validators.compose([Validators.required])),
+      userType:'tourist'
     })
   }
 
@@ -45,7 +46,7 @@ export class SignUpTouristComponent implements OnInit{
     if (this.signUpTouristForm.valid) {
       this.service.RegisterUser(this.signUpTouristForm.value).subscribe(result => {
         alert("Please contact admin for enable access.','Registered successfully")
-        this.router.navigate(['login'])
+        this.router.navigate(['sign-in'])
       });
     } else {
       alert("Please enter valid data.")
@@ -59,5 +60,7 @@ export class SignUpTouristComponent implements OnInit{
   cancelSignUp(){
     console.log("Cancelled")
   }
-  signUp(){}
+  signUp(){
+    this.proceedregister()
+  }
 }
