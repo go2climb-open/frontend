@@ -18,7 +18,8 @@ export class SignUpAgencyComponent implements OnInit{
       agencyName: this.builder.control('',Validators.compose([Validators.required])),
       phone: this.builder.control('',Validators.compose([Validators.required, Validators.maxLength(9)])),
       location: this.builder.control('',Validators.compose([Validators.required])),
-      ruc: this.builder.control('',Validators.compose([Validators.required]))
+      ruc: this.builder.control('',Validators.compose([Validators.required])),
+      userType:'agency'
     })
   }
 

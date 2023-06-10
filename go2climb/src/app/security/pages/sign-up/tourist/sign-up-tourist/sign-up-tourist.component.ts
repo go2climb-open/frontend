@@ -17,7 +17,8 @@ export class SignUpTouristComponent implements OnInit{
       password: this.builder.control('',Validators.compose([Validators.required, Validators.minLength(8)])),
       name: this.builder.control('',Validators.compose([Validators.required])),
       phone: this.builder.control('',Validators.compose([Validators.required, Validators.maxLength(9)])),
-      location: this.builder.control('',Validators.compose([Validators.required]))
+      location: this.builder.control('',Validators.compose([Validators.required])),
+      userType:'tourist'
     })
   }
 

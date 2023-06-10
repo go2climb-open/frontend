@@ -95,5 +95,25 @@
       "img_url": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-logo%2C-travel-company-logo-%281%29-design-template-bc9dcb1ca0e92d6394dea26418a87c8e_screen.jpg",
       "type_user": "agency"
     }
+  ],
+  "user": [
+    {
+      "email": "julian@gmail.com",
+      "password": "qwertyuio",
+      "agencyName": "Julian",
+      "phone": "987654321",
+      "location": "Peru",
+      "ruc": "65465",
+      "id": 1
+    },
+    {
+      "email": "fiorella@gmail.com",
+      "password": "qwertyuio",
+      "name": "fiorella",
+      "phone": "987654321",
+      "location": "Lima",
+      "userType": "tourist",
+      "id": 2
+    }
   ]
 }
