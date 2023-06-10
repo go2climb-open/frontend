@@ -30,8 +30,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  serviceDetail() {
-    console.log('servicedetail');
+  serviceDetail(id: number) {
+    this.router.navigate(['/service-detail', id]);
   }
 
   search(value: String) {

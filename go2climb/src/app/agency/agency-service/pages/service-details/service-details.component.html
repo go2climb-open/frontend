@@ -12,7 +12,9 @@
 
   <div class="container card">
     <div class="pictures">
-      <img [src]="currentService?.img_url || defaultImage" alt="service" />
+      <div>
+        <img [src]="currentService?.img_url || defaultImage" alt="service" />
+      </div>
 
       <div class="collage">
         <img src="../../assets/river.png" alt="river" />
