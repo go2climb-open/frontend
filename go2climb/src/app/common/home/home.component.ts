@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   services: Iservice[] = [];
   value = '';
-  userType: string = 'agency';
+  userType: any;
 
   constructor(
     private servicesService: ServicesService,
@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.fetchServices();
+    this.userType=sessionStorage.getItem('userType');
+    console.log(this.userType);
   }
 
   fetchServices() {

@@ -1,5 +1,4 @@
 <mat-toolbar class="toolbar">
-  <h1>{{userType}}</h1>
   <span><img class="logo" src="../../assets/logo.png"></span>
   <a *ngIf="userType == 'tourist'" mat-button class="account" [routerLink]="'/account'">Account</a>
   <a *ngIf="userType == 'agency'" mat-button class="account" [routerLink]="'/account-agency'">Account</a>

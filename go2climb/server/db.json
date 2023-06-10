@@ -64,6 +64,14 @@
       "agency_id": 2,
       "status": "Pending",
       "score": 4
+    },
+    {
+      "name": "Jijijija",
+      "description": "jijijija",
+      "price": "420",
+      "location": "jijijija",
+      "img_url": "https://media.timeout.com/images/105894037/750/422/image.jpg",
+      "id": 6
     }
   ],
   "agencies": [
