@@ -13,7 +13,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { AccountAgencyComponent } from './agency/account-agency/account-agency.component';
-import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './common/home/home.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,6 +24,11 @@ import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import { AuthService } from './security/service/auth.service';
 import { ChangePasswordComponent } from './agency/change-password/change-password.component';
 import { MatStepperModule } from '@angular/material/stepper';
+import { SignUpTouristComponent } from './security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component';
+import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component';
+import { MatRadioModule} from "@angular/material/radio";
+import { MatCheckboxModule} from "@angular/material/checkbox";
+import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot-password.component';
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
 import { SearchComponent } from './common/search/search.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -40,10 +44,12 @@ import { ServiceDetailsComponent } from './agency/agency-service/pages/service-d
     HeaderComponent,
     FooterComponent,
     AccountAgencyComponent,
-    SignUpComponent,
     HomeComponent,
     AccountComponent,
     SignInComponent,
+    SignUpTouristComponent,
+    SignUpAgencyComponent,
+    ForgotPasswordComponent,
     ChangePasswordComponent,
     UpgradePlansComponent,
     SearchComponent,
@@ -70,6 +76,8 @@ import { ServiceDetailsComponent } from './agency/agency-service/pages/service-d
     MatNativeDateModule,
     HttpClientModule,
     FormsModule,
+    MatRadioModule,
+    MatCheckboxModule,
     MatStepperModule,
     MatSidenavModule,
     MatSliderModule,
