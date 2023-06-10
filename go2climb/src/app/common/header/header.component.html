@@ -1,8 +1,8 @@
 <mat-toolbar class="toolbar">
-  <h1>{{temp}}</h1>
+  <h1>{{userType}}</h1>
   <span><img class="logo" src="../../assets/logo.png"></span>
-  <a *ngIf="userType == 1" mat-button class="account" [routerLink]="'/account'">Account</a>
-  <a *ngIf="userType == 2" mat-button class="account" [routerLink]="'/account-agency'">Account</a>
+  <a *ngIf="userType == 'tourist'" mat-button class="account" [routerLink]="'/account'">Account</a>
+  <a *ngIf="userType == 'agency'" mat-button class="account" [routerLink]="'/account-agency'">Account</a>
   <a mat-button class="services" [routerLink]="'/home'">Services</a>
   <div class="mat-spacer"></div>
   <a class="hello">Hello User</a>

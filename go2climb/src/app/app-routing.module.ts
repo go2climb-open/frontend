@@ -31,8 +31,8 @@ const routes: Routes = [
   { path: 'add-service', component: AddServiceComponent },
   { path: 'add-service/:id', component: AddServiceComponent },
   { path: 'service-detail/:id', component: ServiceDetailsComponent },
-  { path: '**', component: PageNotFoundComponent },
   { path: 'search/:text', component: SearchComponent },
+  { path: '**', component: PageNotFoundComponent },
 
 ];
 

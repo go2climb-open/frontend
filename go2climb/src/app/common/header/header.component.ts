@@ -5,26 +5,26 @@ import {Component, OnInit, OnChanges, SimpleChanges} from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnChanges{
+export class HeaderComponent implements OnInit{
 
-  temp: any;
-  userType: number = 2;
+  userType: any;
+  // userType: number = 2;
 
 
   constructor() {
     sessionStorage.getItem('userType');
   }
 
-  // ngOnInit(): void {
+   ngOnInit(): void {
+     this.userType=sessionStorage.getItem('userType');
+     console.log(this.userType)
+   }
+
+  // ngOnChanges(changes:SimpleChanges){
+  //   console.log(changes)
   //   this.temp=sessionStorage.getItem('userType');
   //   console.log(this.temp)
   // }
-
-  ngOnChanges(changes:SimpleChanges){
-    console.log(changes)
-    this.temp=sessionStorage.getItem('userType');
-    console.log(this.temp)
-  }
 
 
 }

@@ -114,6 +114,16 @@
       "location": "Lima",
       "userType": "tourist",
       "id": 2
+    },
+    {
+      "email": "juan@gmail.com",
+      "password": "qwertyuio",
+      "agencyName": "juan",
+      "phone": "987654321",
+      "location": "Lima",
+      "ruc": "135165",
+      "userType": "agency",
+      "id": 3
     }
   ]
 }
