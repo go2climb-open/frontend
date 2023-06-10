@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0af4d59-2ae8-41f9-b064-a8c00bc8b4d1" name="Changes" comment="Add different registers [tourist and agency]" />
+    <list default="true" id="a0af4d59-2ae8-41f9-b064-a8c00bc8b4d1" name="Changes" comment="Add different registers [tourist and agency]">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +78,7 @@
       <workItem from="1685966972054" duration="123000" />
       <workItem from="1685967105817" duration="71000" />
       <workItem from="1685967186306" duration="13737000" />
-      <workItem from="1686358911652" duration="5300000" />
+      <workItem from="1686358911652" duration="6215000" />
     </task>
     <task id="LOCAL-00001" summary="Update sign-up">
       <created>1685917892801</created>
