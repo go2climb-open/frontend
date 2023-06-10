@@ -37,6 +37,7 @@ import { PaymentDetailsComponent } from './agency/payment-details/payment-detail
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 import { AddServiceComponent } from './agency/agency-service/pages/add-service-form/add-service.component';
 import { ServiceDetailsComponent } from './agency/agency-service/pages/service-details/service-details.component';
+import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ServiceDetailsComponent } from './agency/agency-service/pages/service-d
     PageNotFoundComponent,
     AddServiceComponent,
     ServiceDetailsComponent,
+    RequestAgencyComponent,
   ],
   imports: [
     BrowserModule,

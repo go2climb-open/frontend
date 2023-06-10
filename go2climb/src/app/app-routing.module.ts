@@ -14,6 +14,7 @@ import {ForgotPasswordComponent} from "./security/pages/forgot-password/forgot-p
 import { SearchComponent } from './common/search/search.component';
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
+import {RequestAgencyComponent} from "./agency/request-agency/request-agency.component";
 
 const routes: Routes = [
 
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'account-change-password', component: ChangePasswordComponent },
   { path: 'account-upgrade-plan', component: UpgradePlansComponent },
   { path: 'account-payment-details', component: PaymentDetailsComponent },
+  { path: 'request', component: RequestAgencyComponent},
   { path: 'add-service', component: AddServiceComponent },
   { path: 'add-service/:id', component: AddServiceComponent },
   { path: 'service-detail/:id', component: ServiceDetailsComponent },

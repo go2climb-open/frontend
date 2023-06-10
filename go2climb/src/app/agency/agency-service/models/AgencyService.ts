@@ -9,5 +9,6 @@ export interface AgencyService {
   isOffer: boolean;
   priceOffer: number;
   agency_id: number;
+  status: string;
   score: number;
 }

@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0af4d59-2ae8-41f9-b064-a8c00bc8b4d1" name="Changes" comment="Add different registers [tourist and agency]">
+      <change beforePath="$PROJECT_DIR$/.idea/frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/server/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/agency/agency-service/models/AgencyService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/agency/agency-service/models/AgencyService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/agency/agency-service/service/agency-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/agency/agency-service/service/agency-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go2climb/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go2climb/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/common/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/common/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/models/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/models/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +37,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/forgort__password__and__signup&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Clases/Ciclo 6/Desarrollo de Aplicaciones Open Source/Trabajos/TP/Ejemplo/Go2Climb&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Clases\\Ciclo 6\\Desarrollo de Aplicaciones Open Source\\Trabajos\\frontend\\go2climb\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/forgort__password__and__signup",
+    "last_opened_file_path": "D:/Clases/Ciclo 6/Desarrollo de Aplicaciones Open Source/Trabajos/TP/Ejemplo/Go2Climb",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\University\\Ciclo VII\\Desarrollo de Aplicaciones Open Source\\TP\\Github\\frontend\\go2climb\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/go2climb/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,6 +86,7 @@
       <workItem from="1685966972054" duration="123000" />
       <workItem from="1685967105817" duration="71000" />
       <workItem from="1685967186306" duration="13737000" />
+      <workItem from="1686358911652" duration="4990000" />
     </task>
     <task id="LOCAL-00001" summary="Update sign-up">
       <created>1685917892801</created>

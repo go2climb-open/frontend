@@ -10,6 +10,7 @@
       "isOffer": false,
       "priceOffer": 0,
       "agency_id": 1,
+      "status": "Pending",
       "score": 3
     },
     {
@@ -22,6 +23,7 @@
       "isOffer": false,
       "priceOffer": 0,
       "agency_id": 1,
+      "status": "Pending",
       "score": 3
     },
     {
@@ -34,6 +36,7 @@
       "isOffer": true,
       "priceOffer": 0,
       "agency_id": 1,
+      "status": "Pending",
       "score": 4
     },
     {
@@ -46,6 +49,7 @@
       "isOffer": false,
       "priceOffer": 0,
       "agency_id": 2,
+      "status": "Pending",
       "score": 4
     },
     {
@@ -58,30 +62,8 @@
       "isOffer": false,
       "priceOffer": 0,
       "agency_id": 2,
+      "status": "Pending",
       "score": 4
-    },
-    {
-      "name": "Prueba ahora",
-      "description": "Descripcion del conflicto",
-      "price": "100",
-      "location": "Pisco",
-      "id": 6
-    },
-    {
-      "name": "Testeo",
-      "description": "Descripcion del testeo",
-      "price": "2000",
-      "location": "Fuera",
-      "img_url": "",
-      "id": 7
-    },
-    {
-      "name": "Test5",
-      "description": "De preuba",
-      "price": "2000",
-      "location": "Fuera",
-      "img_url": "https://concepto.de/wp-content/uploads/2012/03/turismo-e1552499785400-800x400.jpg",
-      "id": 8
     }
   ],
   "agencies": [
