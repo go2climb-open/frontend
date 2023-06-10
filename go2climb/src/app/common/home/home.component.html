@@ -26,7 +26,7 @@
 
 <mat-grid-list cols="3" rowHeight="390px">
   <mat-grid-tile *ngFor="let service of services" style="display: flex">
-    <mat-card class="service-card" (click)="serviceDetail()">
+    <mat-card class="service-card" (click)="serviceDetail(service.id)">
       <img
         mat-card-image
         src="{{ service.img_url }}"

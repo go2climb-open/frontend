@@ -3,13 +3,16 @@
 
   <section class="avatar__wrapper">
     <div class="avatar">
-      <img
-        class="avatar__image"
-        src="../../../assets/user-icon.webp"
-        alt="user avatar"
-      />
+      <img class="avatar__image" [src]="img_url" alt="user avatar" />
 
-      <button mat-flat-button color="primary">Upload photo</button>
+      <mat-form-field class="example-full-width">
+        <mat-label>URL de la imagen</mat-label>
+        <input matInput placeholder="URL" [formControl]="imageURLInput" />
+      </mat-form-field>
+
+      <button mat-flat-button color="primary" (click)="handleUploadPhoto()">
+        Upload photo
+      </button>
     </div>
 
     <div class="avatar__configuration">
