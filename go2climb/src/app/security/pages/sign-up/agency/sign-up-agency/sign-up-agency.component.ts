@@ -50,8 +50,9 @@ export class SignUpAgencyComponent implements OnInit{
     if (this.signUpAgencyForm.valid) {
       this.service.RegisterUser(this.signUpAgencyForm.value).subscribe(result => {
         alert("Please contact admin for enable access.','Registered successfully")
-        this.router.navigate(['login'])
+        this.router.navigate(['sign-in'])
       });
+      console.log("im here baby")
     } else {
       alert("Please enter valid data.")
     }

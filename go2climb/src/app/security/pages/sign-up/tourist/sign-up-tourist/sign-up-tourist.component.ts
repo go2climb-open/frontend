@@ -45,7 +45,7 @@ export class SignUpTouristComponent implements OnInit{
     if (this.signUpTouristForm.valid) {
       this.service.RegisterUser(this.signUpTouristForm.value).subscribe(result => {
         alert("Please contact admin for enable access.','Registered successfully")
-        this.router.navigate(['login'])
+        this.router.navigate(['sign-in'])
       });
     } else {
       alert("Please enter valid data.")
@@ -59,5 +59,7 @@ export class SignUpTouristComponent implements OnInit{
   cancelSignUp(){
     console.log("Cancelled")
   }
-  signUp(){}
+  signUp(){
+    this.proceedregister()
+  }
 }
