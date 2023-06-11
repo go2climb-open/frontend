@@ -72,6 +72,14 @@
       "location": "jijijija",
       "img_url": "https://media.timeout.com/images/105894037/750/422/image.jpg",
       "id": 6
+    },
+    {
+      "name": "prueba clase",
+      "description": "aaaaaa",
+      "price": "500",
+      "location": "Huascaran",
+      "img_url": "https://e00-marca.uecdn.es/blogs/una-vida-al-filo/imagenes_posts/2018/07/07/194521_696x465.jpg",
+      "id": 7
     }
   ],
   "agencies": [
@@ -130,6 +138,15 @@
       "ruc": "135165",
       "userType": "agency",
       "id": 3
+    },
+    {
+      "email": "turista@gmail.com",
+      "password": "12345678",
+      "name": "prueba turista",
+      "phone": "111111111",
+      "location": "Lima",
+      "userType": "tourist",
+      "id": 4
     }
   ]
 }
