@@ -13,7 +13,6 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { AccountAgencyComponent } from './agency/account-agency/account-agency.component';
-import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './common/home/home.component';
 import  { MatIconModule } from "@angular/material/icon";
@@ -29,7 +28,6 @@ import {AuthService} from "./security/service/auth.service";
     HeaderComponent,
     FooterComponent,
     AccountAgencyComponent,
-    SignUpComponent,
     HomeComponent,
     AccountComponent,
     SignInComponent
