@@ -1,29 +1,47 @@
 import { Component, OnInit } from '@angular/core';
+import { Iservice } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services-service.service';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements  OnInit {
-
-  services: any[] = [1,2,3,4,5,6];
+export class HomeComponent implements OnInit {
+  services: Iservice[] = [];
   value = '';
-  userType: boolean = true;
-  constructor() { }
+  userType: any;
 
+  constructor(
+    private servicesService: ServicesService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
+    this.fetchServices();
+    this.userType=sessionStorage.getItem('userType');
+    console.log(this.userType);
   }
 
-  serviceDetail(){
-    console.log('servicedetail');
+  fetchServices() {
+    this.servicesService.getServices().subscribe((data) => {
+      this.services = data;
+      //console.log(this.services);
+    });
   }
 
-  search(value: String){
-    console.log('searching '+value);
+  serviceDetail(id: number) {
+    this.router.navigate(['/service-detail', id]);
   }
 
+  search(value: String) {
+    console.log('searching ' + value);
+    this.router.navigate(['/search', value]);
+  }
+
+  handleGoToAddService() {
+    this.router.navigate(['/add-service']);
+  }
 }
-
-

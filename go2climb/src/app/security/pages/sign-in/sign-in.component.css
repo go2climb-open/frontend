@@ -7,6 +7,14 @@
   display: flex;
   justify-content: center;
 }
+.login-example-card2{
+  background-color: rgba(53, 111, 128, 1);
+  width: 20%;
+  height: 10rem;
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+}
 
 .login-example-full-width{
   width: 100%;

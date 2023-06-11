@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {Iservice} from "../../models/service";
+import {catchError, retry} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -37,5 +39,8 @@ export class AuthService {
   }
   Getaccessbyrole(role:any,menu:any){
     return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
+  }
+  GetUserByEmail(email: any){
+    return this.http.get<Iservice>('http://localhost:3000/user/'+ `?email=${email}`);
   }
 }
