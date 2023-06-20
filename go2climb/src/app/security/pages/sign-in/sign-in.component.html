@@ -1,38 +1,46 @@
-<div style="display: flex; justify-content: center">
-  <mat-card class="login-example-card">
-    <mat-card-header>
-      <h2 style="color: white">Login</h2>
-    </mat-card-header>
-    <mat-card-content>
-      <form class="login-example-form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
-        <mat-form-field class="login-example-full-width">
-          <mat-label>Username</mat-label>
-          <input matInput formControlName="email" >
-        </mat-form-field>
-        <mat-form-field class="login-example-full-width">
-          <mat-label>Password</mat-label>
-          <input matInput type="password" formControlName="password" >
-        </mat-form-field>
-        <div style="justify-content: space-between; flex-direction: row; display: flex">
-          <button mat-raised-button color="primary">Sign In</button>
-          <a [routerLink]="'/forgot-password'">Forgot password?</a>
+<div class="content-log" style="display: flex; justify-content: center">
+  <div class="first-content">
+    <div class="image-section">
+      <img src="assets/images/go2climb.jpg" alt="business image">
+    </div>
+  </div>
+
+  <div class="second-content">
+    <mat-card class="login-example-card">
+      <mat-card-header>
+        <h2 style="color: white">Login</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="login-example-form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+          <mat-form-field class="login-example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="email" >
+          </mat-form-field>
+          <mat-form-field class="login-example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" >
+          </mat-form-field>
+          <div style="justify-content: space-between; flex-direction: row; display: flex">
+            <button mat-raised-button color="primary">Sign In</button>
+            <a [routerLink]="'/forgot-password'">Forgot password?</a>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="login-example-card2">
+      <mat-card-header>
+        <h3 style="color: white">Register</h3>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <a (click)="placeRegister()" mat-raised-button color="accent">Don't have an account? Sign Up</a>
         </div>
-      </form>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="login-example-card2">
-    <mat-card-header>
-      <h3 style="color: white">Register</h3>
-    </mat-card-header>
-    <mat-card-content>
-      <div>
-        <a (click)="placeRegister()" mat-raised-button color="accent">Don't have an account? Sign Up</a>
-      </div>
-      <mat-radio-group name="options" aria-label="Select an option" [(ngModel)]="typeSelect">
-        <mat-radio-button *ngFor="let type of types" name="options" [value]="type">{{type}}</mat-radio-button>
-      </mat-radio-group>
-    </mat-card-content>
-  </mat-card>
+        <mat-radio-group name="options" aria-label="Select an option" [(ngModel)]="typeSelect">
+          <mat-radio-button *ngFor="let type of types" name="options" [value]="type">{{type}}</mat-radio-button>
+        </mat-radio-group>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
 
 

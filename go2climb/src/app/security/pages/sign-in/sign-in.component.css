@@ -1,3 +1,30 @@
+.content-log{
+  display:flex;
+  background-color: red;
+  justify-content: center;
+  height: 100vh;
+}
+.first-content{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+}
+.second-content{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-section{
+  flex: 1;
+}
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .login-example-card{
   background-color: rgba(53, 111, 128, 1);
