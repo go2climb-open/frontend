@@ -13,6 +13,8 @@ export class SignInComponent {
   types = ['tourist', 'agency'];
   typeSelect = ''
 
+  //image?: "assethttps://as1.ftcdn.net/v2/jpg/01/51/15/00/1000_F_151150048_iw9b4g2EivCwQVWZCJC789zoYklr4Utc.jpg";
+
   constructor(private builder: FormBuilder, private service: AuthService,
               private router: Router) {
     sessionStorage.clear();
@@ -24,6 +26,7 @@ export class SignInComponent {
     email: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.required)
   });
+
 
   proceedlogin() {
     if (this.loginform.valid) {

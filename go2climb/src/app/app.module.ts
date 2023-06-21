@@ -38,6 +38,7 @@ import { PageNotFoundComponent } from './common/page-not-found/page-not-found.co
 import { AddServiceComponent } from './agency/agency-service/pages/add-service-form/add-service.component';
 import { ServiceDetailsComponent } from './agency/agency-service/pages/service-details/service-details.component';
 import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,7 @@ import { RequestAgencyComponent } from './agency/request-agency/request-agency.c
     PageNotFoundComponent,
     AddServiceComponent,
     ServiceDetailsComponent,
-    RequestAgencyComponent,
+    RequestAgencyComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +84,7 @@ import { RequestAgencyComponent } from './agency/request-agency/request-agency.c
     MatStepperModule,
     MatSidenavModule,
     MatSliderModule,
+    MatTabsModule
   ],
   providers: [AuthService, MatDatepickerModule],
   bootstrap: [AppComponent],

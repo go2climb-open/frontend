@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0af4d59-2ae8-41f9-b064-a8c00bc8b4d1" name="Changes" comment="Add different registers [tourist and agency]">
-      <change afterPath="$PROJECT_DIR$/go2climb/assets/go2climb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go2climb/src/assets/images/go2climb.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/assets/images/go2climb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
