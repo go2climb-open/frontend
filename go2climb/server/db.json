@@ -80,6 +80,30 @@
       "location": "Huascaran",
       "img_url": "https://e00-marca.uecdn.es/blogs/una-vida-al-filo/imagenes_posts/2018/07/07/194521_696x465.jpg",
       "id": 7
+    },
+    {
+      "name": "Prueba 1",
+      "description": "Lorem ipsum dolor",
+      "price": 200,
+      "location": "Huascaran",
+      "img_url": "https://wwwnc.cdc.gov/travel/images/mountain-biker.jpg",
+      "id": 8
+    },
+    {
+      "name": "Jijijija",
+      "description": "jijijija",
+      "price": "420",
+      "location": "jijijija",
+      "img_url": "https://media.timeout.com/images/105894037/750/422/image.jpg",
+      "id": 9
+    },
+    {
+      "name": "Jijijija",
+      "description": "jijijija",
+      "price": "420",
+      "location": "jijijija",
+      "img_url": "https://media.timeout.com/images/105894037/750/422/image.jpg",
+      "id": 10
     }
   ],
   "agencies": [
@@ -147,6 +171,16 @@
       "location": "Lima",
       "userType": "tourist",
       "id": 4
+    },
+    {
+      "email": "zoneturist1@gmail.com",
+      "password": "qwertyuio",
+      "agencyName": "ZoneTurist1",
+      "phone": "968532145",
+      "location": "Arequipa",
+      "ruc": "1487513",
+      "userType": "agency",
+      "id": 5
     }
   ]
 }

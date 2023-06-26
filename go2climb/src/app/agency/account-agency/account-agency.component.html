@@ -37,7 +37,7 @@
         <mat-icon style="font-size: 20px;">business</mat-icon>
         <mat-form-field class="example-full-width">
           <mat-label>Agency name </mat-label>
-          <input matInput placeholder="AgencyName" value="TuristZone" [disabled]="!isEditable">
+          <input matInput placeholder="AgencyName" [(ngModel)]="agency.agencyName" [disabled]="!isEditable">
         </mat-form-field><br>
       </div>
 
@@ -45,7 +45,7 @@
         <mat-icon style="font-size: 20px;">email</mat-icon>
         <mat-form-field class="example-full-width">
           <mat-label>Email </mat-label>
-          <input matInput placeholder="AgencyName" value="thom@gmail.com" [disabled]="!isEditable">
+          <input matInput placeholder="AgencyName" [(ngModel)]="agency.email" [disabled]="!isEditable">
         </mat-form-field><br>
       </div>
 
@@ -53,7 +53,7 @@
         <mat-icon style="font-size: 20px;">phone</mat-icon>
         <mat-form-field class="example-full-width">
           <mat-label>Phone </mat-label>
-          <input matInput placeholder="Phone" value="987654231" [disabled]="!isEditable">
+          <input matInput placeholder="Phone"  [(ngModel)]="agency.phone" [disabled]="!isEditable">
         </mat-form-field><br>
       </div>
 
@@ -61,7 +61,7 @@
         <mat-icon style="font-size: 20px;">location_on</mat-icon>
         <mat-form-field class="example-full-width">
           <mat-label>Location </mat-label>
-          <input matInput placeholder="Location" value="San Miguel" [disabled]="!isEditable">
+          <input matInput placeholder="Location" [(ngModel)]="agency.location" [disabled]="!isEditable">
         </mat-form-field><br>
       </div>
 
@@ -88,7 +88,7 @@
 
       <div class="editButtons">
         <button class="editProfile" mat-raised-button *ngIf="isEditable" >Reset</button>
-        <button class="editProfile" mat-raised-button *ngIf="isEditable" (click)="onSaveClick()" >Save changes</button>
+        <button class="editProfile" mat-raised-button *ngIf="isEditable" (click)="saveChanges()" >Save changes</button>
       </div>
 
     </div>
