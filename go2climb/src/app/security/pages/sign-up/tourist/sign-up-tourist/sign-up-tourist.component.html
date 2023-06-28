@@ -12,6 +12,15 @@
             Name is required
           </mat-error>
         </mat-form-field>
+
+        <mat-form-field class="mat-form-field">
+          <mat-label>Last name:</mat-label>
+          <input matInput placeholder="Lastname" formControlName="lastName" required />
+          <mat-error *ngIf="lastName.errors?.['required']">
+            Lastname is required
+          </mat-error>
+        </mat-form-field>
+
         <mat-form-field class="mat-form-field">
           <mat-label>E-mail:</mat-label>
           <input matInput placeholder="user@domain.com" formControlName="email" required />
@@ -21,16 +30,16 @@
         </mat-form-field>
         <mat-form-field class="mat-form-field">
           <mat-label>Mobile number:</mat-label>
-          <input matInput placeholder="phone" formControlName="phone" required />
-          <mat-error *ngIf="phone.errors?.['required']">
+          <input matInput placeholder="phone" input type="number" formControlName="phoneNumber" required />
+          <mat-error *ngIf="phoneNumber.errors?.['required']">
             Mobile number is required
           </mat-error>
         </mat-form-field>
         <mat-form-field class="mat-form-field">
-          <mat-label>Location:</mat-label>
-          <input matInput placeholder="location" formControlName="location" required />
-          <mat-error *ngIf="location.errors?.['required']">
-            Location is required
+          <mat-label>Address:</mat-label>
+          <input matInput placeholder="Address" formControlName="address" required />
+          <mat-error *ngIf="address.errors?.['required']">
+            Address is required
           </mat-error>
         </mat-form-field>
         <mat-form-field class="mat-form-field">

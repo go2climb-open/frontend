@@ -30,7 +30,7 @@ export class SignInComponent {
 
   proceedlogin() {
     if (this.loginform.valid) {
-      this.service.GetUserByEmail(this.loginform.value.email).subscribe(item => {
+      this.service.GetUserByEmailAndPasswordTourist(this.loginform.value.email,this.loginform.value.password).subscribe(item => {
         this.result = item;
         console.log(this.result)
         if (this.result[0].password === this.loginform.value.password) {

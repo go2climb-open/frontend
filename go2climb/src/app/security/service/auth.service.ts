@@ -11,36 +11,47 @@ export class AuthService {
   constructor(private http:HttpClient) {
 
   }
-  apiurl='http://localhost:3000/user';
+  apiurlUser='http://44.204.1.137:8080/api/v1/tourists';
+  apiurlAgency='http://44.204.1.137:8080/api/v1/agencies';
 
   RegisterUser(inputdata:any){
-    return this.http.post(this.apiurl,inputdata)
+    return this.http.post(this.apiurlUser,inputdata)
   }
-  GetUserbyCode(id:any){
-    return this.http.get(this.apiurl+'/'+id);
+  RegisterAgency(inputdata:any){
+    return this.http.post(this.apiurlAgency,inputdata)
   }
-  Getall(){
-    return this.http.get(this.apiurl);
+  // GetUserbyCode(id:any){
+  //   return this.http.get(this.apiurl+'/'+id);
+  // }
+  // Getall(){
+  //   return this.http.get(this.apiurl);
+  // }
+  updateTourist(id:any,inputdata:any){
+    return this.http.put(this.apiurlUser+'/'+id,inputdata);
   }
-  updateuser(id:any,inputdata:any){
-    return this.http.put(this.apiurl+'/'+id,inputdata);
+  updateAgenyc(id:any,inputdata:any){
+    return this.http.put(this.apiurlAgency+'/'+id,inputdata);
   }
-  getuserrole(){
-    return this.http.get('http://localhost:3000/role');
-  }
+  // getuserrole(){
+  //   return this.http.get('http://localhost:3000/role');
+  // }
   isloggedin(){
     return sessionStorage.getItem('username')!=null;
   }
   getrole(){
     return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
   }
-  GetAllCustomer(){
-    return this.http.get('http://localhost:3000/customer');
+  // GetAllCustomer(){
+  //   return this.http.get('http://localhost:3000/customer');
+  // }
+  // Getaccessbyrole(role:any,menu:any){
+  //   return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
+  // }
+  GetUserByEmailAndPasswordTourist(email: any, password:any){
+    return this.http.get<Iservice>(this.apiurlUser+ `/email&password/${email}/${password}`);
   }
-  Getaccessbyrole(role:any,menu:any){
-    return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
-  }
-  GetUserByEmail(email: any){
-    return this.http.get<Iservice>('http://localhost:3000/user/'+ `?email=${email}`);
+
+  GetUserByEmailAndPasswordAgency(email: any,password:any){
+    return this.http.get<Iservice>(this.apiurlAgency+ `/email&password/${email}/${password}`);
   }
 }

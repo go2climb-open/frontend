@@ -7,8 +7,8 @@
       <form [formGroup]="signUpAgencyForm">
         <mat-form-field class="mat-form-field">
           <mat-label>Agency name:</mat-label>
-          <input matInput placeholder="agencyName" formControlName="agencyName" required />
-          <mat-error *ngIf="agencyName.errors?.['required']">
+          <input matInput placeholder="agencyName" formControlName="name" required />
+          <mat-error *ngIf="name.errors?.['required']">
             Name is required
           </mat-error>
         </mat-form-field>
@@ -21,8 +21,8 @@
         </mat-form-field>
         <mat-form-field class="mat-form-field">
           <mat-label>Mobile number:</mat-label>
-          <input matInput placeholder="phone" formControlName="phone" required />
-          <mat-error *ngIf="phone.errors?.['required']">
+          <input matInput placeholder="phone" input type="number" formControlName="phoneNumber" required />
+          <mat-error *ngIf="phoneNumber.errors?.['required']">
             Mobile number is required
           </mat-error>
         </mat-form-field>
@@ -35,7 +35,7 @@
         </mat-form-field>
         <mat-form-field class="mat-form-field">
           <mat-label>RUC:</mat-label>
-          <input matInput placeholder="ruc" formControlName="ruc" required />
+          <input matInput placeholder="ruc" input type="number" formControlName="ruc" required />
           <mat-error *ngIf="ruc.errors?.['required']">
             Location is required
           </mat-error>
