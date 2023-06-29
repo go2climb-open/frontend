@@ -32,11 +32,16 @@ export class AddServiceComponent implements OnInit {
 
       this.agencyServiceService
         .getServiceById(params['id'])
-        .subscribe((service: any) => {
+        .subscribe((service) => {
           const { name, description, price, location } = service;
 
-          this.serviceForm.setValue({ name, description, price, location });
-          this.img_url = service.img_url;
+          this.serviceForm.setValue({
+            name,
+            description,
+            price: String(price),
+            location,
+          });
+          this.img_url = service.photos;
         });
     });
   }
