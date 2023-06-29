@@ -34,7 +34,7 @@ export class ServiceDetailsComponent implements OnInit {
             agency_id: service.agency.id,
             date: service.creationDate,
             img_url: service.photos,
-            isOffer: service.isOffer,
+            isOffer: Boolean(service.isOffer),
             location: service.location,
             price: service.price,
             priceOffer: service.newPrice,

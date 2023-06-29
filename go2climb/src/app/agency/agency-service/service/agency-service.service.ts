@@ -13,12 +13,13 @@ export class AgencyServiceService {
 
   // apiUrl = 'http://localhost:3000/services';
   apiUrl = 'http://44.204.1.137:8080/api/v1/services';
+  agencyUrl = 'http://44.204.1.137:8080/api/v1/agencies';
 
   getServiceById(id: number) {
     return this.http.get<AgencyServiceResponse>(`${this.apiUrl}/${id}`);
   }
 
-  addService(service: any) {
+  addService(service: any, agencyId: string) {
     const serviceBody: AgencyServiceRequest = {
       name: service.name,
       description: service.description,
@@ -28,11 +29,14 @@ export class AgencyServiceService {
       newPrice: service.price,
       creationDate: new Date().toDateString(),
       photos: service.img_url,
-      isOffer: false,
-      isPopular: false,
+      isOffer: 0,
+      isPopular: 0,
     };
 
-    return this.http.post(this.apiUrl, serviceBody);
+    return this.http.post(
+      `${this.agencyUrl}/${agencyId}/services`,
+      serviceBody
+    );
   }
 
   putService(id: number, service: any) {

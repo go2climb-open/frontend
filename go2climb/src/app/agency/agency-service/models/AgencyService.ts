@@ -22,8 +22,8 @@ export interface AgencyServiceRequest {
   newPrice: number;
   creationDate: string;
   photos: string;
-  isOffer: boolean;
-  isPopular: boolean;
+  isOffer: number;
+  isPopular: number;
 }
 
 export interface AgencyServiceResponse extends AgencyServiceRequest {
