@@ -8,7 +8,7 @@ import { Iservice } from '../models/service';
 })
 export class ServicesService {
 
-  basePath : string = 'http://localhost:3000/services'
+  basePath : string = 'http://44.204.1.137:8080/api/v1/services'
 
   httpOptions : {headers:HttpHeaders} ={
     headers: new HttpHeaders({
@@ -30,18 +30,18 @@ export class ServicesService {
     return throwError(() => new Error('Something happened with request, please try again later'));
   }
 
-  getServices(): Observable<Iservice[]>{
-    return this.http.get<Iservice[]>(this.basePath, this.httpOptions)
+  getServices(): Observable<any>{
+    return this.http.get<any>(this.basePath, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));
   }
 
-  getServicebyId(id:number): Observable<Iservice>{
-    return this.http.get<Iservice>(`${this.basePath}/${id}`, this.httpOptions)
+  getServicebyId(id:number): Observable<any>{
+    return this.http.get<any>(`${this.basePath}/${id}`, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));
   }
 
-  searchService(name: String): Observable<Iservice[]>{
-    return this.http.get<Iservice[]>(this.basePath+ `?name_like=${name}`, this.httpOptions)
+  searchService(name: String): Observable<any>{
+    return this.http.get<any>(this.basePath+ `/name_like=${name}`, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));
   }
 
