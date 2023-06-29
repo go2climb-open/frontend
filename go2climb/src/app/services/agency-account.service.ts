@@ -1,32 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { agency } from '../models/agency';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AgencyAccountService {
-  private apiUrl = 'http://localhost:3000/user';
-  private userEmail: string='zoneturist1@gmail.com';
 
-  constructor(private http: HttpClient) { }
+  apiUrl = 'http://44.204.1.137:8080/api/v1/agencies';
 
-  getEmail(): string {
-    return this.userEmail;
+  constructor(private http: HttpClient) {}
+
+  getById(id: string) {
+    return this.http.get<agency>(`${this.apiUrl}/${id}`);
   }
 
-  setEmail(email: string) {
-    this.userEmail = email;
-  }
-
-
-  getAgencyByUser(email: string): Observable<any> {
-    const url = `${this.apiUrl}?email=${email}&userType=agency`;
-    return this.http.get(url);
-  }
-
-  updateAgency(agency: any): Observable<any> {
-    const url = `${this.apiUrl}/${agency.id}`;
-    return this.http.put(url, agency);
+  update(agency: agency) {
+    return this.http.put(`${this.apiUrl}/${agency.id}`, agency);
   }
 }
