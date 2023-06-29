@@ -27,20 +27,7 @@ export class ServiceDetailsComponent implements OnInit {
       this.agencyServiceService
         .getServiceById(params['id'])
         .subscribe((service) => {
-          this.currentService = {
-            id: service.id,
-            name: service.name,
-            description: service.description,
-            agency_id: service.agency.id,
-            date: service.creationDate,
-            img_url: service.photos,
-            isOffer: Boolean(service.isOffer),
-            location: service.location,
-            price: service.price,
-            priceOffer: service.newPrice,
-            score: service.score,
-            status: service.location,
-          };
+          this.currentService = service;
         });
     });
   }

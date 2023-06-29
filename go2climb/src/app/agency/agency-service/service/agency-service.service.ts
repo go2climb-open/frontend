@@ -1,9 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  AgencyServiceRequest,
-  AgencyServiceResponse,
-} from 'src/app/agency/agency-service/models/AgencyService';
+import { AgencyService } from 'src/app/agency/agency-service/models/AgencyService';
 
 @Injectable({
   providedIn: 'root',
@@ -11,35 +8,17 @@ import {
 export class AgencyServiceService {
   constructor(private http: HttpClient) {}
 
-  // apiUrl = 'http://localhost:3000/services';
-  apiUrl = 'http://44.204.1.137:8080/api/v1/services';
-  agencyUrl = 'http://44.204.1.137:8080/api/v1/agencies';
+  apiUrl = 'http://localhost:3000/services';
 
   getServiceById(id: number) {
-    return this.http.get<AgencyServiceResponse>(`${this.apiUrl}/${id}`);
+    return this.http.get<AgencyService>(`${this.apiUrl}/${id}`);
   }
 
-  addService(service: any, agencyId: string) {
-    const serviceBody: AgencyServiceRequest = {
-      name: service.name,
-      description: service.description,
-      location: service.location,
-      score: 0,
-      price: service.price,
-      newPrice: service.price,
-      creationDate: new Date().toDateString(),
-      photos: service.img_url,
-      isOffer: 0,
-      isPopular: 0,
-    };
-
-    return this.http.post(
-      `${this.agencyUrl}/${agencyId}/services`,
-      serviceBody
-    );
+  addService(service: any) {
+    return this.http.post(this.apiUrl, service);
   }
 
-  putService(id: number, service: any) {
+  putService(id: number, service: any){
     return this.http.put(`${this.apiUrl}/${id}`, service);
   }
 
