@@ -26,8 +26,8 @@ import { ChangePasswordComponent } from './agency/change-password/change-passwor
 import { MatStepperModule } from '@angular/material/stepper';
 import { SignUpTouristComponent } from './security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component';
 import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component';
-import { MatRadioModule} from "@angular/material/radio";
-import { MatCheckboxModule} from "@angular/material/checkbox";
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot-password.component';
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
 import { SearchComponent } from './common/search/search.component';
@@ -38,7 +38,7 @@ import { PageNotFoundComponent } from './common/page-not-found/page-not-found.co
 import { AddServiceComponent } from './agency/agency-service/pages/add-service-form/add-service.component';
 import { ServiceDetailsComponent } from './agency/agency-service/pages/service-details/service-details.component';
 import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -59,7 +59,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     PageNotFoundComponent,
     AddServiceComponent,
     ServiceDetailsComponent,
-    RequestAgencyComponent
+    RequestAgencyComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,7 +84,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatStepperModule,
     MatSidenavModule,
     MatSliderModule,
-    MatTabsModule
+    MatTabsModule,
   ],
   providers: [AuthService, MatDatepickerModule],
   bootstrap: [AppComponent],

@@ -9,6 +9,8 @@ import { AgencyServiceService } from 'src/app/agency/agency-service/service/agen
   styleUrls: ['./add-service.component.css'],
 })
 export class AddServiceComponent implements OnInit {
+  userId = sessionStorage.getItem('userid') as string;
+
   serviceForm = this.formBuilder.group({
     name: '',
     description: '',
@@ -32,11 +34,16 @@ export class AddServiceComponent implements OnInit {
 
       this.agencyServiceService
         .getServiceById(params['id'])
-        .subscribe((service: any) => {
+        .subscribe((service) => {
           const { name, description, price, location } = service;
 
-          this.serviceForm.setValue({ name, description, price, location });
-          this.img_url = service.img_url;
+          this.serviceForm.setValue({
+            name,
+            description,
+            price: String(price),
+            location,
+          });
+          this.img_url = service.photos;
         });
     });
   }
@@ -44,7 +51,10 @@ export class AddServiceComponent implements OnInit {
   addService() {
     console.log(this.serviceForm.value);
     this.agencyServiceService
-      .addService({ ...this.serviceForm.value, img_url: this.img_url })
+      .addService(
+        { ...this.serviceForm.value, img_url: this.img_url },
+        this.userId
+      )
       .subscribe(() => this.router.navigate(['/home']));
   }
 
