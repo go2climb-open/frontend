@@ -26,6 +26,12 @@ export class AgencyServiceService {
     );
   }
 
+  postReview(sId: string, tId: string ,review: any) {
+    console.log(`${this.apiUrl}/${sId}/service-reviews/touristId=${tId}`);
+    return this.http.post(`${this.apiUrl}/${sId}/service-reviews/touristId=${tId}`, review);
+  }
+
+
   addService(service: any, agencyId: string) {
     const serviceBody: AgencyServiceRequest = {
       name: service.name,

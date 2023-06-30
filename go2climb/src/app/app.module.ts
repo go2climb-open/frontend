@@ -40,6 +40,9 @@ import { ServiceDetailsComponent } from './agency/agency-service/pages/service-d
 import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MyServicesComponent } from './agency/my-services/my-services.component';
+import { RequestTouristComponent } from './tourist/request-tourist/request-tourist.component';
+import { PurchaseComponent } from './tourist/purchase/purchase.component';
+import { CommentComponent } from './tourist/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +65,9 @@ import { MyServicesComponent } from './agency/my-services/my-services.component'
     ServiceDetailsComponent,
     RequestAgencyComponent,
     MyServicesComponent,
+    RequestTouristComponent,
+    PurchaseComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,

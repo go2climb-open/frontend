@@ -3,11 +3,15 @@
   <header>
     <h2>{{ currentService?.name }}</h2>
 
-    <div>
+    <div *ngIf="userType == 'agency' && currentService?.agency_id == temp">
       <button mat-raised-button (click)="handleGoToEdit()">Edit</button>
       <button mat-raised-button color="warn" (click)="handleDeleteService()">
         Delete
       </button>
+    </div>
+
+    <div *ngIf="userType == 'tourist'">
+      <button mat-raised-button (click)="handleGoToPurchase()">Request</button>
     </div>
   </header>
 

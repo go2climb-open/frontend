@@ -1,14 +1,13 @@
-import {HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError, retry, catchError } from 'rxjs';
-import { agency } from '../models/agency';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HiredServiceService {
+export class TouristHireService {
 
-  basePath : string = 'http://44.204.1.137:8080/api/v1/hired-services'
+  basePath : string = 'http://44.204.1.137:8080/api/v1/services'
   httpOptions : {headers:HttpHeaders} ={
     headers: new HttpHeaders({
       'Content-Type' : 'application/json',
@@ -29,22 +28,8 @@ export class HiredServiceService {
     return throwError(() => new Error('Something happened with request, please try again later'));
   }
 
-  getHiredServices(): Observable<any> {
-    return this.http.get<any>(`${this.basePath}`,this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      )
+  postHire(data: any, tId: string, sId: string): Observable<any>{
+    console.log(this.basePath+`/${sId}/hired-services/touristId=${tId}`);
+    return this.http.post(this.basePath+`/${sId}/hired-services/touristId=${tId}`, data, this.httpOptions);
   }
-
-  getHiredServiceByTouristId(id: number): Observable<any> {
-    return this.http.get<any>(`${this.basePath}/touristId=${id}`,this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      )
-
-
-  }
-
 }

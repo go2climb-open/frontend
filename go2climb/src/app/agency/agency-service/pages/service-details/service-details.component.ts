@@ -12,7 +12,9 @@ import { AgencyServiceService } from 'src/app/agency/agency-service/service/agen
   styleUrls: ['./service-details.component.css'],
 })
 export class ServiceDetailsComponent implements OnInit {
+  userType =  sessionStorage.getItem('userType') as string;
   userId = sessionStorage.getItem('userid') as string;
+  temp = 0;
   currentService: AgencyService | undefined = undefined;
   reviews: ServiceReview[] = [];
   defaultImage: string;
@@ -26,6 +28,7 @@ export class ServiceDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.temp = Number(this.userId)
     this.route.params.subscribe((params) => {
       console.log(params['id']);
 
@@ -71,4 +74,9 @@ export class ServiceDetailsComponent implements OnInit {
   handleGoToEdit(): void {
     this.router.navigate(['/add-service', this.currentService?.id]);
   }
+
+  handleGoToPurchase(): void {
+    this.router.navigate(['/purchase', this.currentService?.id]);
+  }
 }
+

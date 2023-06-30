@@ -16,6 +16,9 @@ import { PaymentDetailsComponent } from './agency/payment-details/payment-detail
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
 import { MyServicesComponent } from './agency/my-services/my-services.component';
+import { PurchaseComponent } from './tourist/purchase/purchase.component';
+import { RequestTouristComponent } from './tourist/request-tourist/request-tourist.component';
+import { CommentComponent } from './tourist/comment/comment.component';
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -35,6 +38,9 @@ const routes: Routes = [
   { path: 'add-service/:id', component: AddServiceComponent },
   { path: 'service-detail/:id', component: ServiceDetailsComponent },
   { path: 'search/:text', component: SearchComponent },
+  { path: 'request-tourist', component: RequestTouristComponent },
+  { path: 'purchase/:id', component: PurchaseComponent },
+  { path: 'comment/:id', component: CommentComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
