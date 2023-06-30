@@ -26,8 +26,8 @@ import { ChangePasswordComponent } from './agency/change-password/change-passwor
 import { MatStepperModule } from '@angular/material/stepper';
 import { SignUpTouristComponent } from './security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component';
 import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component';
-import { MatRadioModule} from "@angular/material/radio";
-import { MatCheckboxModule} from "@angular/material/checkbox";
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot-password.component';
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
 import { SearchComponent } from './common/search/search.component';
@@ -38,6 +38,11 @@ import { PageNotFoundComponent } from './common/page-not-found/page-not-found.co
 import { AddServiceComponent } from './agency/agency-service/pages/add-service-form/add-service.component';
 import { ServiceDetailsComponent } from './agency/agency-service/pages/service-details/service-details.component';
 import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MyServicesComponent } from './agency/my-services/my-services.component';
+import { RequestTouristComponent } from './tourist/request-tourist/request-tourist.component';
+import { PurchaseComponent } from './tourist/purchase/purchase.component';
+import { CommentComponent } from './tourist/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +64,10 @@ import { RequestAgencyComponent } from './agency/request-agency/request-agency.c
     AddServiceComponent,
     ServiceDetailsComponent,
     RequestAgencyComponent,
+    MyServicesComponent,
+    RequestTouristComponent,
+    PurchaseComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,6 +92,7 @@ import { RequestAgencyComponent } from './agency/request-agency/request-agency.c
     MatStepperModule,
     MatSidenavModule,
     MatSliderModule,
+    MatTabsModule,
   ],
   providers: [AuthService, MatDatepickerModule],
   bootstrap: [AppComponent],

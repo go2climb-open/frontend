@@ -3,7 +3,7 @@ export interface Iservice {
   name: String,
   price: number,
   location: String,
-  img_url: String,
+  photos: String,
   description: String,
   isOffer: boolean,
   priceOffer: number,

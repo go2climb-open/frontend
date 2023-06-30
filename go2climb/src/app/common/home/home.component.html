@@ -30,7 +30,7 @@
     <mat-card class="service-card" (click)="serviceDetail(service.id)">
       <img
         mat-card-image
-        src="{{ service.img_url }}"
+        src="{{ service.photos }}"
         class="card-img"
         alt="Photo of a Shiba Inu"
       />
@@ -50,10 +50,10 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<div *ngIf="userType == 'agency'" style="display: flex; justify-content: end">
+<!--div *ngIf="userType == 'agency'" style="display: flex; justify-content: end">
   <div style="margin-right: 5%" id="btn">
     <button mat-fab extended (click)="handleGoToAddService()" class="add-btn">
       <mat-icon>add</mat-icon>Add
     </button>
   </div>
-</div>
+</div-->

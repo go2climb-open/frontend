@@ -65,6 +65,11 @@ header h2 {
   gap: 8px;
 }
 
+.profile img {
+  width: 30px;
+  height: 30px;
+}
+
 .score {
   display: flex;
   align-items: center;

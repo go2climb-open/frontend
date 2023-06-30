@@ -1,0 +1,42 @@
+<app-header></app-header>
+<main class="container">
+  <h2 class="title">Post Comment</h2>
+
+  <section class="avatar__wrapper">
+    <div class="avatar__configuration">
+      <form
+        class="configuration__form"
+        [formGroup]="serviceForm"
+        (ngSubmit)="postComment()"
+      >
+        <mat-form-field class="example-full-width">
+          <mat-label>Comment</mat-label>
+          <input matInput formControlName="comment" />
+        </mat-form-field>
+
+        <mat-form-field  class="example-full-width">
+          <mat-label>Date</mat-label>
+          <input  matInput formControlName="date" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Score</mat-label>
+          <input max="5" min="0" type="number" matInput formControlName="score" />
+        </mat-form-field>
+
+
+        <!-- <mat-form-field class="example-full-width">
+          <mat-label>Date</mat-label>
+          <input matInput formControlName="date" [matDatepicker]="picker" />
+          <mat-datepicker-toggle matIconSuffix [for]="picker" />
+          <mat-datepicker #picker />
+        </mat-form-field> -->
+
+        <div class="actions">
+          <button mat-flat-button color="primary">Add</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+

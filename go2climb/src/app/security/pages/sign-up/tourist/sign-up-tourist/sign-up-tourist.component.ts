@@ -16,9 +16,11 @@ export class SignUpTouristComponent implements OnInit{
       email: this.builder.control('',Validators.compose([Validators.email, Validators.required])),
       password: this.builder.control('',Validators.compose([Validators.required, Validators.minLength(8)])),
       name: this.builder.control('',Validators.compose([Validators.required])),
-      phone: this.builder.control('',Validators.compose([Validators.required, Validators.maxLength(9)])),
-      location: this.builder.control('',Validators.compose([Validators.required])),
-      userType:'tourist'
+      phoneNumber: this.builder.control('',Validators.compose([Validators.required, Validators.maxLength(9)])),
+      address: this.builder.control('',Validators.compose([Validators.required])),
+      lastName:this.builder.control('',Validators.compose([Validators.required])),
+      photo:'https://www.testhouse.net/wp-content/uploads/2021/11/default-avatar.jpg'
+
     })
   }
 
@@ -34,16 +36,21 @@ export class SignUpTouristComponent implements OnInit{
     return this.signUpTouristForm.controls['name'];
   }
 
-  get phone(){
-    return this.signUpTouristForm.controls['phone'];
+  get phoneNumber(){
+    return this.signUpTouristForm.controls['phoneNumber'];
   }
 
-  get location(){
-    return this.signUpTouristForm.controls['location'];
+  get lastName(){
+    return this.signUpTouristForm.controls['lastName'];
+  }
+
+  get address(){
+    return this.signUpTouristForm.controls['address'];
   }
 
   proceedregister() {
     if (this.signUpTouristForm.valid) {
+      console.log(this.signUpTouristForm.value);
       this.service.RegisterUser(this.signUpTouristForm.value).subscribe(result => {
         alert("Please contact admin for enable access.','Registered successfully")
         this.router.navigate(['sign-in'])

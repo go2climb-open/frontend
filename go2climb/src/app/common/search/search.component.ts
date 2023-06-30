@@ -6,6 +6,10 @@ import { Iservice } from 'src/app/models/service';
 import { AgencyService } from 'src/app/services/agency-service.service';
 import { ServicesService } from 'src/app/services/services-service.service';
 
+interface Response {
+  content: any[];
+}
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -17,7 +21,7 @@ export class SearchComponent implements OnInit {
   results: Iservice[] = [];
   agency: String[] = [];
   filtered : Iservice[] = [];
-
+  response: Response = {content: []}
 
   max = 1000;
   min = 0;
@@ -44,9 +48,10 @@ export class SearchComponent implements OnInit {
 
     return this.servicesService.searchService(this.searchWord)
     .subscribe(data => {
-      this.results = data;
+      this.response = data;
+      this.results = this.response.content;
       this.filtered = this.results;
-      //console.log(this.results);
+      console.log(this.results);
       //console.log(this.filtered);
     })
   }

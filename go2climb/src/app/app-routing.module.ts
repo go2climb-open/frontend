@@ -8,34 +8,40 @@ import { AddServiceComponent } from 'src/app/agency/agency-service/pages/add-ser
 import { ServiceDetailsComponent } from 'src/app/agency/agency-service/pages/service-details/service-details.component';
 import { ChangePasswordComponent } from './agency/change-password/change-password.component';
 import { UpgradePlansComponent } from './agency/upgrade-plans/upgrade-plans.component';
-import {SignUpTouristComponent} from "./security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component";
-import {SignUpAgencyComponent} from "./security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component";
-import {ForgotPasswordComponent} from "./security/pages/forgot-password/forgot-password.component";
+import { SignUpTouristComponent } from './security/pages/sign-up/tourist/sign-up-tourist/sign-up-tourist.component';
+import { SignUpAgencyComponent } from './security/pages/sign-up/agency/sign-up-agency/sign-up-agency.component';
+import { ForgotPasswordComponent } from './security/pages/forgot-password/forgot-password.component';
 import { SearchComponent } from './common/search/search.component';
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
-import {RequestAgencyComponent} from "./agency/request-agency/request-agency.component";
+import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
+import { MyServicesComponent } from './agency/my-services/my-services.component';
+import { PurchaseComponent } from './tourist/purchase/purchase.component';
+import { RequestTouristComponent } from './tourist/request-tourist/request-tourist.component';
+import { CommentComponent } from './tourist/comment/comment.component';
 
 const routes: Routes = [
-
   { path: 'sign-in', component: SignInComponent },
   { path: '', component: SignInComponent },
-  { path: 'sign-up-tourist',  component: SignUpTouristComponent},
-  { path: 'sign-up-agency',  component: SignUpAgencyComponent},
-  { path: 'forgot-password', component: ForgotPasswordComponent},
+  { path: 'sign-up-tourist', component: SignUpTouristComponent },
+  { path: 'sign-up-agency', component: SignUpAgencyComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'my-services', component: MyServicesComponent},
   { path: 'account', component: AccountComponent },
   { path: 'account-agency', component: AccountAgencyComponent },
   { path: 'account-change-password', component: ChangePasswordComponent },
   { path: 'account-upgrade-plan', component: UpgradePlansComponent },
   { path: 'account-payment-details', component: PaymentDetailsComponent },
-  { path: 'request', component: RequestAgencyComponent},
+  { path: 'request', component: RequestAgencyComponent },
   { path: 'add-service', component: AddServiceComponent },
   { path: 'add-service/:id', component: AddServiceComponent },
   { path: 'service-detail/:id', component: ServiceDetailsComponent },
   { path: 'search/:text', component: SearchComponent },
+  { path: 'request-tourist', component: RequestTouristComponent },
+  { path: 'purchase/:id', component: PurchaseComponent },
+  { path: 'comment/:id', component: CommentComponent },
   { path: '**', component: PageNotFoundComponent },
-
 ];
 
 @NgModule({

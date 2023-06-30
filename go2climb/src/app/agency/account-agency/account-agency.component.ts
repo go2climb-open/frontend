@@ -1,61 +1,122 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import {Router} from "@angular/router";
+import { agency } from 'src/app/models/agency';
+import { AgencyAccountService } from 'src/app/services/agency-account.service';
+
 
 @Component({
   selector: 'app-account-agency',
   templateUrl: './account-agency.component.html',
   styleUrls: ['./account-agency.component.css']
 })
-export class AccountAgencyComponent {
-  agencyName: string = "My Agency";
-  email: string = "myagency@gmail.com";
-  phone: string = "123456789";
-  location: string = "Lima, Peru";
-  ruc: string = "12345678901";
-  description: string = "We are a travel agency dedicated to providing the best experiences for our clients.";
-  isEditable:boolean=false;
+export class AccountAgencyComponent implements OnInit{
+
+  userId = sessionStorage.getItem('userid') as string;
+
+  currentAgency: agency | undefined = undefined;
+
+  agencyData = this.formBuilder.group({
+    name: '',
+    email: '',
+    phoneNumber: '',
+    description: '',
+    location: '',
+    ruc: '',
+    score: '',
 
 
-  selectedFile: File | undefined;
-  image="https://i.pinimg.com/originals/1b/e3/d9/1be3d94da55cf6348014713835811b3b.jpg";
 
+  });
 
-  constructor(private router: Router) { }
+  photo = '../../../assets/user-icon.webp';
 
-  redirectToChangePassword() {
-    this.router.navigate(['/account-change-password']);
+  constructor(
+    private agencyService: AgencyAccountService,
+    private formBuilder: FormBuilder
+  ) {}
+
+  ngOnInit(): void {
+    this.agencyService.getById(this.userId).subscribe((agency) => {
+      this.currentAgency = agency;
+
+      this.agencyData.setValue({
+        name: agency.name.toString(),
+        email: agency.email.toString(),
+        phoneNumber: agency.phoneNumber.toString(),
+        description: agency.description.toString(),
+        location: agency.location.toString(),
+        ruc: agency.ruc.toString(),
+        score: agency.score.toString(),
+      });
+
+      this.photo = agency.photo.toString();
+    });
   }
-  redirectToUpgradePlans(){
-    this.router.navigate(['account-upgrade-plan']);
+
+  updateTourist(): void {
+    const { name, email, phoneNumber, description,location,ruc,score } = this.agencyData.value;
+
+    if (!this.currentAgency) return;
+
+    this.agencyService
+      .update({
+        ...this.currentAgency,
+        name: String(name),
+        email: String(email),
+        phoneNumber: Number(phoneNumber),
+        description: String(description),
+        location: String(location),
+        ruc: Number(ruc),
+        score: Number(score)
+      })
+      .subscribe();
   }
 
-  changeEditable() {
-    this.isEditable = !this.isEditable;
-  }
-  onSaveClick() {
-    this.isEditable=false;
-  }
+
+  // constructor(private agencyAccountService: AgencyAccountService,private router: Router) {
+  //   this.agencyAccountService = agencyAccountService;
+  // }
 
 
 
 
-  uploadPhoto() {
-    this.image = "";
-    const fileInput = document.querySelector('input[type=file]') as HTMLInputElement;
-    fileInput.click();
 
-  }
-
-  onFileSelected(event: any) {
-    if(event.target.files){
-      var reader=new FileReader()
-      reader.readAsDataURL(event.target.files[0])
-      reader.onload=(event:any)=>{
-        this.image=event.target.result
-      }
-
-    }
-
-  }
+  // redirectToChangePassword() {
+  //   this.router.navigate(['/account-change-password']);
+  // }
+  // redirectToUpgradePlans(){
+  //   this.router.navigate(['account-upgrade-plan']);
+  // }
+  //
+  // changeEditable() {
+  //   this.isEditable = !this.isEditable;
+  // }
+  // onSaveClick() {
+  //   this.isEditable=false;
+  // }
+  //
+  //
+  //
+  //
+  //
+  // uploadPhoto() {
+  //   this.image = "";
+  //   const fileInput = document.querySelector('input[type=file]') as HTMLInputElement;
+  //   fileInput.click();
+  //
+  // }
+  //
+  // onFileSelected(event: any) {
+  //   if(event.target.files){
+  //     var reader=new FileReader()
+  //     reader.readAsDataURL(event.target.files[0])
+  //     reader.onload=(event:any)=>{
+  //       this.image=event.target.result
+  //     }
+  //
+  //   }
+  //
+  // }
 
 }

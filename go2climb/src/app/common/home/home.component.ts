@@ -4,6 +4,11 @@ import { ServicesService } from 'src/app/services/services-service.service';
 
 import { Router } from '@angular/router';
 
+interface Response {
+  content: any[];
+}
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,6 +18,7 @@ export class HomeComponent implements OnInit {
   services: Iservice[] = [];
   value = '';
   userType: any;
+  response: Response = {content: []}
 
   constructor(
     private servicesService: ServicesService,
@@ -27,8 +33,9 @@ export class HomeComponent implements OnInit {
 
   fetchServices() {
     this.servicesService.getServices().subscribe((data) => {
-      this.services = data;
-      //console.log(this.services);
+      this.response = data;
+      console.log(this.response);
+      this.services = this.response.content;
     });
   }
 
