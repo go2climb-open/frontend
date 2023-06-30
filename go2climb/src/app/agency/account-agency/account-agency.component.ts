@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import {Router} from "@angular/router";
+import { agency } from 'src/app/models/agency';
 import { AgencyAccountService } from 'src/app/services/agency-account.service';
+
 
 @Component({
   selector: 'app-account-agency',
@@ -8,92 +11,112 @@ import { AgencyAccountService } from 'src/app/services/agency-account.service';
   styleUrls: ['./account-agency.component.css']
 })
 export class AccountAgencyComponent implements OnInit{
-  agency: any;
 
-  originalAgency: any;
+  userId = sessionStorage.getItem('userid') as string;
 
-  // agencyName: string = "My Agency";
-  // email: string = "myagency@gmail.com";
-  // phone: string = "123456789";
-  // location: string = "Lima, Peru";
-   ruc: string = "12345678901";
-   description: string = "We are a travel agency dedicated to providing the best experiences for our clients.";
-   isEditable:boolean=false;
+  currentAgency: agency | undefined = undefined;
+
+  agencyData = this.formBuilder.group({
+    name: '',
+    email: '',
+    phoneNumber: '',
+    description: '',
+    location: '',
+    ruc: '',
+    score: '',
+
+
+
+  });
+
+  photo = '../../../assets/user-icon.webp';
+
+  constructor(
+    private agencyService: AgencyAccountService,
+    private formBuilder: FormBuilder
+  ) {}
+
+  ngOnInit(): void {
+    this.agencyService.getById(this.userId).subscribe((agency) => {
+      this.currentAgency = agency;
+
+      this.agencyData.setValue({
+        name: agency.name.toString(),
+        email: agency.email.toString(),
+        phoneNumber: agency.phoneNumber.toString(),
+        description: agency.description.toString(),
+        location: agency.location.toString(),
+        ruc: agency.ruc.toString(),
+        score: agency.score.toString(),
+      });
+
+      this.photo = agency.photo.toString();
+    });
+  }
+
+  updateTourist(): void {
+    const { name, email, phoneNumber, description,location,ruc,score } = this.agencyData.value;
+
+    if (!this.currentAgency) return;
+
+    this.agencyService
+      .update({
+        ...this.currentAgency,
+        name: String(name),
+        email: String(email),
+        phoneNumber: Number(phoneNumber),
+        description: String(description),
+        location: String(location),
+        ruc: Number(ruc),
+        score: Number(score)
+      })
+      .subscribe();
+  }
+
+
+  // constructor(private agencyAccountService: AgencyAccountService,private router: Router) {
+  //   this.agencyAccountService = agencyAccountService;
+  // }
+
+
+
+
+
+  // redirectToChangePassword() {
+  //   this.router.navigate(['/account-change-password']);
+  // }
+  // redirectToUpgradePlans(){
+  //   this.router.navigate(['account-upgrade-plan']);
+  // }
   //
-   selectedFile: File | undefined;
-   image="https://i.pinimg.com/originals/1b/e3/d9/1be3d94da55cf6348014713835811b3b.jpg";
-
-
-  constructor(private agencyAccountService: AgencyAccountService,private router: Router) {
-    this.agencyAccountService = agencyAccountService;
-  }
-
-  ngOnInit() {
-    const userEmail = this.agencyAccountService.getEmail(); // Obtener el email del usuario desde el servicio
-    this.getAgencyByUser(userEmail);
-  }
-
-  getAgencyByUser(email: string) {
-    this.agencyAccountService.getAgencyByUser(email).subscribe(
-      (data: any) => {
-        if (data.length > 0) {
-          this.agency = data[0];
-        }
-      },
-      (error: any) => {
-        console.error('Error al obtener la agencia:', error);
-      }
-    );
-  }
-
-  redirectToChangePassword() {
-    this.router.navigate(['/account-change-password']);
-  }
-  redirectToUpgradePlans(){
-    this.router.navigate(['account-upgrade-plan']);
-  }
-
-  changeEditable() {
-    this.isEditable = !this.isEditable;
-  }
-  onSaveClick() {
-    this.isEditable=false;
-  }
-
-  saveChanges() {
-    // Llama al servicio AgencyAccountService para actualizar la agencia
-    this.agencyAccountService.updateAgency(this.agency).subscribe(
-      (data: any) => {
-        console.log('Agencia actualizada:', data);
-        this.originalAgency = { ...this.agency }; // Actualiza la copia de seguridad con los nuevos datos
-        this.isEditable = false; // Deshabilita la edición
-      },
-      (error: any) => {
-        console.error('Error al actualizar la agencia:', error);
-      }
-    );
-  }
-
-
-
-
-  uploadPhoto() {
-    this.image = "";
-    const fileInput = document.querySelector('input[type=file]') as HTMLInputElement;
-    fileInput.click();
-
-  }
-
-  onFileSelected(event: any) {
-    if(event.target.files){
-      var reader=new FileReader()
-      reader.readAsDataURL(event.target.files[0])
-      reader.onload=(event:any)=>{
-        this.image=event.target.result
-      }
-
-    }
-
-  }
+  // changeEditable() {
+  //   this.isEditable = !this.isEditable;
+  // }
+  // onSaveClick() {
+  //   this.isEditable=false;
+  // }
+  //
+  //
+  //
+  //
+  //
+  // uploadPhoto() {
+  //   this.image = "";
+  //   const fileInput = document.querySelector('input[type=file]') as HTMLInputElement;
+  //   fileInput.click();
+  //
+  // }
+  //
+  // onFileSelected(event: any) {
+  //   if(event.target.files){
+  //     var reader=new FileReader()
+  //     reader.readAsDataURL(event.target.files[0])
+  //     reader.onload=(event:any)=>{
+  //       this.image=event.target.result
+  //     }
+  //
+  //   }
+  //
+  // }
 
 }

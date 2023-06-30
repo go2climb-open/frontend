@@ -6,7 +6,7 @@ export interface agency {
   description: String;
   location: String;
   password: String;
-  ruc: String;
-  phoneNumber: String;
-  img_url: String;
+  ruc: number;
+  phoneNumber: number;
+  photo: String;
 }

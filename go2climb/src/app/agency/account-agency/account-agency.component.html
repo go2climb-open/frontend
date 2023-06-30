@@ -1,100 +1,56 @@
 <app-header></app-header>
-<mat-grid-list class="card" cols="4" rowHeight="100%">
+<main class="container">
+  <h2 class="title">Account</h2>
 
-  <mat-grid-tile class="mat-grid-title-first"
-    [colspan]="1"
-    [rowspan]="1"
-    [style.background]="'transparent'"
-  >
-    <div class="profile">
-      <img  mat-card-avatar class="profilePhoto" [src]="image" alt="User Avatar">
-
-      <div class="button-upload-content">
-        <button class="upload-photoButton" mat-raised-button
-                *ngIf="isEditable"
-                (click)="uploadPhoto()">Upload Photo</button>
-        <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden>
-
-      </div>
-
-      <div class="button-upgrade-plan">
-        <button mat-raised-button *ngIf="!isEditable" (click)="redirectToUpgradePlans()">Upgrade</button>
-      </div>
-
+  <section class="avatar__wrapper">
+    <div class="avatar">
+      <img class="avatar__image" [src]="photo" alt="user avatar" />
     </div>
 
-
-
-  </mat-grid-tile>
-  <mat-grid-tile class="mat-grid-tile-second"
-    [colspan]="2"
-    [rowspan]="1"
-    [style.background]="'transparent'">
-
-    <div class="profile-fields">
-
-      <div>
-        <mat-icon style="font-size: 20px;">business</mat-icon>
+    <div class="avatar__configuration">
+      <form
+        class="configuration__form"
+        [formGroup]="agencyData"
+        (ngSubmit)="updateTourist()"
+      >
         <mat-form-field class="example-full-width">
-          <mat-label>Agency name </mat-label>
-          <input matInput placeholder="AgencyName" [(ngModel)]="agency.agencyName" [disabled]="!isEditable">
-        </mat-form-field><br>
-      </div>
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
 
-      <div>
-        <mat-icon style="font-size: 20px;">email</mat-icon>
         <mat-form-field class="example-full-width">
-          <mat-label>Email </mat-label>
-          <input matInput placeholder="AgencyName" [(ngModel)]="agency.email" [disabled]="!isEditable">
-        </mat-form-field><br>
-      </div>
+          <mat-label>E-mail</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
 
-      <div>
-        <mat-icon style="font-size: 20px;">phone</mat-icon>
         <mat-form-field class="example-full-width">
-          <mat-label>Phone </mat-label>
-          <input matInput placeholder="Phone"  [(ngModel)]="agency.phone" [disabled]="!isEditable">
-        </mat-form-field><br>
-      </div>
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phoneNumber" />
+        </mat-form-field>
 
-      <div>
-        <mat-icon style="font-size: 20px;">location_on</mat-icon>
         <mat-form-field class="example-full-width">
-          <mat-label>Location </mat-label>
-          <input matInput placeholder="Location" [(ngModel)]="agency.location" [disabled]="!isEditable">
-        </mat-form-field><br>
-      </div>
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description" />
+        </mat-form-field>
 
-      <div>
-        <mat-icon style="font-size: 20px;">info</mat-icon>
         <mat-form-field class="example-full-width">
-          <mat-label>Ruc </mat-label>
-          <input matInput placeholder="Ruc" value="4658971632" [disabled]="!isEditable">
-        </mat-form-field><br>
-      </div>
+          <mat-label>Location</mat-label>
+          <input matInput formControlName="location" />
+        </mat-form-field>
 
-      <div>
-        <mat-icon style="font-size: 20px;">receipt</mat-icon>
         <mat-form-field class="example-full-width">
-          <mat-label>Description </mat-label>
-          <input matInput placeholder="Description" value="I love radiohead, they are my life" [disabled]="!isEditable">
-        </mat-form-field><br>
-      </div>
+          <mat-label>Ruc</mat-label>
+          <input matInput formControlName="ruc" />
+        </mat-form-field>
 
-      <div class="editButtons">
-        <button class="editProfile" mat-raised-button *ngIf="!isEditable" (click)="redirectToChangePassword()">Change password</button>
-        <button class="editProfile" mat-raised-button *ngIf="!isEditable" (click)="changeEditable()" >Update</button>
-      </div>
 
-      <div class="editButtons">
-        <button class="editProfile" mat-raised-button *ngIf="isEditable" >Reset</button>
-        <button class="editProfile" mat-raised-button *ngIf="isEditable" (click)="saveChanges()" >Save changes</button>
-      </div>
 
+        <div class="actions">
+          <!-- <button mat-flat-button color="primary">Change password</button> -->
+
+          <button mat-flat-button color="primary">Update</button>
+        </div>
+      </form>
     </div>
-
-
-  </mat-grid-tile>
-
-</mat-grid-list>
-
+  </section>
+</main>
