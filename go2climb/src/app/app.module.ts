@@ -39,6 +39,7 @@ import { AddServiceComponent } from './agency/agency-service/pages/add-service-f
 import { ServiceDetailsComponent } from './agency/agency-service/pages/service-details/service-details.component';
 import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MyServicesComponent } from './agency/my-services/my-services.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     AddServiceComponent,
     ServiceDetailsComponent,
     RequestAgencyComponent,
+    MyServicesComponent,
   ],
   imports: [
     BrowserModule,

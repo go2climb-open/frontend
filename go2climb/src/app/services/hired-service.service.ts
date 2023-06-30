@@ -1,15 +1,14 @@
+import {HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable,  retry,  throwError, catchError } from 'rxjs';
+import { Observable, throwError, retry, catchError } from 'rxjs';
 import { agency } from '../models/agency';
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class AgencyService {
+export class HiredServiceService {
 
-  basePath : string = 'http://localhost:3000/agencies'
+  basePath : string = 'http://44.204.1.137:8080/api/v1/hired-services'
   httpOptions : {headers:HttpHeaders} ={
     headers: new HttpHeaders({
       'Content-Type' : 'application/json',
@@ -30,23 +29,12 @@ export class AgencyService {
     return throwError(() => new Error('Something happened with request, please try again later'));
   }
 
-  getAgencies(): Observable<agency[]> {
-    return this.http.get<agency[]>(this.basePath, this.httpOptions)
-    .pipe(
-      retry(2),
-      catchError(this.handleError)
-    )
+  getHiredServices(): Observable<any> {
+    return this.http.get<any>(`${this.basePath}`,this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
   }
 
-  getAgencybyId(id: number): Observable<agency> {
-    return this.http.get<agency>(`${this.basePath}/${id}`,this.httpOptions)
-    .pipe(
-      retry(2),
-      catchError(this.handleError)
-    )
-  }
-  
 }
-
-
-

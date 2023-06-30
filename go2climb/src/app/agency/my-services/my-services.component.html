@@ -1,30 +1,12 @@
 <app-header></app-header>
 <div class="header" style="display: flex; justify-content: space-between">
   <div style="padding-left: 5%">
-    <h1 style="font-weight: bold; color: #356f80">Services</h1>
-  </div>
-  <div style="margin-right: 5%">
-    <mat-form-field class="search-field" appearance="outline">
-      <mat-label>Search</mat-label>
-      <input
-        matInput
-        type="text"
-        [(ngModel)]="value"
-        (keydown.enter)="search(value)"
-      />
-      <button
-        *ngIf="value"
-        matSuffix
-        mat-icon-button
-        aria-label="Clear"
-        (click)="search(value)"
-      >
-        <mat-icon>search</mat-icon>
-      </button>
-    </mat-form-field>
+    <h1 style="font-weight: bold; color: #356f80">My Services</h1>
   </div>
 </div>
-
+<div style="padding-left: 5%" *ngIf="services.length == 0">
+  <h1 style="font-weight: bold; color: #356f80">No Tienes Servicios</h1>
+</div>
 <mat-grid-list cols="3" rowHeight="390px">
   <mat-grid-tile *ngFor="let service of services" style="display: flex">
     <mat-card class="service-card" (click)="serviceDetail(service.id)">
@@ -38,7 +20,7 @@
         <mat-card-title>{{ service.name }}</mat-card-title>
         <mat-card-subtitle style="display: flex; justify-content: center">{{
           service.location
-        }}</mat-card-subtitle>
+          }}</mat-card-subtitle>
         <p style="display: flex; justify-content: center">
           {{ service.price + "$" }}
         </p>
@@ -50,10 +32,10 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<!--div *ngIf="userType == 'agency'" style="display: flex; justify-content: end">
+<div *ngIf="userType == 'agency'" style="display: flex; justify-content: end">
   <div style="margin-right: 5%" id="btn">
     <button mat-fab extended (click)="handleGoToAddService()" class="add-btn">
       <mat-icon>add</mat-icon>Add
     </button>
   </div>
-</div-->
+</div>

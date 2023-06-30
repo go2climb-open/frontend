@@ -5,14 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0af4d59-2ae8-41f9-b064-a8c00bc8b4d1" name="Changes" comment="Add different registers [tourist and agency]">
+      <change afterPath="$PROJECT_DIR$/go2climb/src/app/agency/my-services/my-services.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go2climb/src/app/agency/my-services/my-services.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go2climb/src/app/agency/my-services/my-services.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go2climb/src/app/agency/my-services/my-services.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go2climb/src/app/models/hiredservice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go2climb/src/app/models/service-hired.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go2climb/src/app/services/hired-service.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go2climb/src/app/services/hired-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go2climb/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/security/pages/sign-in/sign-in.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/agency/request-agency/request-agency.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/agency/request-agency/request-agency.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/agency/request-agency/request-agency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/agency/request-agency/request-agency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/agency/request-agency/request-agency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/agency/request-agency/request-agency.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/common/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/common/footer/footer.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/common/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/common/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/common/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/common/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/models/agency.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/models/agency.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/services/agency-service.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/services/agency-service.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/services/agency-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/services/agency-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/services/services-service.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/services/services-service.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go2climb/src/app/services/services-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/go2climb/src/app/services/services-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -40,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "D:/Clases/Ciclo 6/Desarrollo de Aplicaciones Open Source/Trabajos/TP/Ejemplo/Go2Climb",
+    "last_opened_file_path": "D:/University/Ciclo VII/Desarrollo de Aplicaciones Open Source/TF1/frontend/go2climb/src/app/models",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,6 +76,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\University\Ciclo VII\Desarrollo de Aplicaciones Open Source\TF1\frontend\go2climb\src\app\models" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
@@ -89,7 +120,8 @@
       <workItem from="1686416345769" duration="5096000" />
       <workItem from="1686437275640" duration="775000" />
       <workItem from="1687928750969" duration="28000" />
-      <workItem from="1687928786716" duration="1847000" />
+      <workItem from="1687928786716" duration="2361000" />
+      <workItem from="1688078057786" duration="5841000" />
     </task>
     <task id="LOCAL-00001" summary="Update sign-up">
       <created>1685917892801</created>

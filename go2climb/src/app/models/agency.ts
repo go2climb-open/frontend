@@ -9,5 +9,4 @@ export interface agency {
   ruc: String;
   phoneNumber: String;
   img_url: String;
-  type_user: String;
 }

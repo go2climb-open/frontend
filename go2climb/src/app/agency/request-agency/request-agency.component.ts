@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import { hiredservice } from 'src/app/models/hiredservice';
+import { HiredServiceService } from 'src/app/services/hired-service.service';
 import {Iservice} from "../../models/service";
 import {ServicesService} from "../../services/services-service.service";
 
@@ -13,21 +15,28 @@ interface Response {
 })
 export class RequestAgencyComponent implements OnInit{
 
-  services: Iservice[] = [];
+  services: hiredservice[] = [];
+  filtered : hiredservice[] = [];
   response: Response = {content: []}
+  currentid: any
+  value: any;
 
-  constructor(private servicesService: ServicesService) {
+  constructor(private hiredServices: HiredServiceService) {
   }
 
   ngOnInit(): void {
+    this.currentid = sessionStorage.getItem('userid')
     this.fetchServices();
   }
 
   fetchServices() {
-    this.servicesService.getServices().subscribe((data) => {
-      this.response = data;
-      console.log(this.response);
-      this.services = this.response.content;
+    this.hiredServices.getHiredServices().subscribe((data) => {
+        this.response = data;
+        console.log(this.response);
+        this.services = this.response.content;
+      this.filtered = this.services.filter(result => {
+        return result.service.agency.id == this.currentid;
+      })
     });
   }
 

@@ -9,6 +9,7 @@ import { Iservice } from '../models/service';
 export class ServicesService {
 
   basePath : string = 'http://44.204.1.137:8080/api/v1/services'
+  agencyservice: string = 'http://44.204.1.137:8080/api/v1/agencies/'
 
   httpOptions : {headers:HttpHeaders} ={
     headers: new HttpHeaders({
@@ -43,6 +44,11 @@ export class ServicesService {
   searchService(name: String): Observable<any>{
     return this.http.get<any>(this.basePath+ `/name_like=${name}`, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));
+  }
+
+  getAgencyServiceById(id:number): Observable<any>{
+    return this.http.get<any>(this.agencyservice+ `${id}/services`, this.httpOptions)
+      .pipe(retry(1), catchError(this.handleError));
   }
 
 }

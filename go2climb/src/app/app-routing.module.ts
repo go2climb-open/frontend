@@ -15,6 +15,7 @@ import { SearchComponent } from './common/search/search.component';
 import { PaymentDetailsComponent } from './agency/payment-details/payment-details.component';
 import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
 import { RequestAgencyComponent } from './agency/request-agency/request-agency.component';
+import { MyServicesComponent } from './agency/my-services/my-services.component';
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'sign-up-agency', component: SignUpAgencyComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'my-services', component: MyServicesComponent},
   { path: 'account', component: AccountComponent },
   { path: 'account-agency', component: AccountAgencyComponent },
   { path: 'account-change-password', component: ChangePasswordComponent },
