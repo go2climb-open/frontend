@@ -12,6 +12,7 @@ import { AgencyServiceService } from 'src/app/agency/agency-service/service/agen
   styleUrls: ['./service-details.component.css'],
 })
 export class ServiceDetailsComponent implements OnInit {
+  userId = sessionStorage.getItem('userid') as string;
   currentService: AgencyService | undefined = undefined;
   reviews: ServiceReview[] = [];
   defaultImage: string;
@@ -44,6 +45,8 @@ export class ServiceDetailsComponent implements OnInit {
             priceOffer: service.newPrice,
             score: service.score,
             status: service.location,
+            agency_name: service.agency.name,
+            agency_img: service.agency.photo,
           };
         });
 
@@ -57,9 +60,11 @@ export class ServiceDetailsComponent implements OnInit {
     this.route.params.subscribe((params) => {
       console.log(params['id']);
 
-      this.agencyServiceService.deleteService(params['id']).subscribe(() => {
-        this.router.navigate(['home']);
-      });
+      this.agencyServiceService
+        .deleteService(params['id'], this.userId)
+        .subscribe(() => {
+          this.router.navigate(['home']);
+        });
     });
   }
 
