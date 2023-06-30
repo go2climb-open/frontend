@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import {
   AgencyServiceRequest,
   AgencyServiceResponse,
+  ReviewsResponse,
 } from 'src/app/agency/agency-service/models/AgencyService';
 
 @Injectable({
@@ -17,6 +18,12 @@ export class AgencyServiceService {
 
   getServiceById(id: number) {
     return this.http.get<AgencyServiceResponse>(`${this.apiUrl}/${id}`);
+  }
+
+  getServicesReviewsById(id: number) {
+    return this.http.get<ReviewsResponse>(
+      `${this.apiUrl}/${id}/service-reviews`
+    );
   }
 
   addService(service: any, agencyId: string) {

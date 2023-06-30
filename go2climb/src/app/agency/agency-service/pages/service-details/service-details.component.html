@@ -83,51 +83,13 @@
         <h3>Reviews:</h3>
 
         <div class="card">
-          <div class="client">
-            <img
-              class="client-img"
-              src="../../../../../assets/user-icon.webp"
-              alt="client"
-            />
+          <div class="client" *ngFor="let review of reviews">
+            <img class="client-img" [src]="review.tourist.photo" alt="client" />
 
             <div>
-              <h4>Jhon Doe</h4>
+              <h4>{{ review.tourist.name }} {{ review.tourist.lastName }}</h4>
 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              nemo delectus sed nisi officia. Incidunt maiores facere aliquid
-              perferendis fugiat!
-            </div>
-          </div>
-
-          <div class="client">
-            <img
-              class="client-img"
-              src="../../../../../assets/user-icon.webp"
-              alt="client"
-            />
-
-            <div>
-              <h4>Jhon Doe</h4>
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              nemo delectus sed nisi officia. Incidunt maiores facere aliquid
-              perferendis fugiat!
-            </div>
-          </div>
-
-          <div class="client">
-            <img
-              class="client-img"
-              src="../../../../../assets/user-icon.webp"
-              alt="client"
-            />
-
-            <div>
-              <h4>Jhon Doe</h4>
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              nemo delectus sed nisi officia. Incidunt maiores facere aliquid
-              perferendis fugiat!
+              {{ review.comment }}
             </div>
           </div>
         </div>

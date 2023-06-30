@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AgencyService } from 'src/app/agency/agency-service/models/AgencyService';
+import {
+  AgencyService,
+  ServiceReview,
+} from 'src/app/agency/agency-service/models/AgencyService';
 import { AgencyServiceService } from 'src/app/agency/agency-service/service/agency-service.service';
 
 @Component({
@@ -10,6 +13,7 @@ import { AgencyServiceService } from 'src/app/agency/agency-service/service/agen
 })
 export class ServiceDetailsComponent implements OnInit {
   currentService: AgencyService | undefined = undefined;
+  reviews: ServiceReview[] = [];
   defaultImage: string;
 
   constructor(
@@ -42,6 +46,10 @@ export class ServiceDetailsComponent implements OnInit {
             status: service.location,
           };
         });
+
+      this.agencyServiceService
+        .getServicesReviewsById(params['id'])
+        .subscribe((response) => (this.reviews = response.content));
     });
   }
 

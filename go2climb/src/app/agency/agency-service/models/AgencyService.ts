@@ -32,3 +32,15 @@ export interface AgencyServiceResponse extends AgencyServiceRequest {
     id: number;
   };
 }
+
+export interface ServiceReview {
+  id: number;
+  date: string;
+  comment: string;
+  score: number;
+  tourist: { name: string; lastName: string; photo: string };
+}
+
+export interface ReviewsResponse {
+  content: ServiceReview[];
+}
