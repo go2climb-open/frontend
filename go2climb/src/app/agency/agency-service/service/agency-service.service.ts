@@ -50,7 +50,7 @@ export class AgencyServiceService {
     return this.http.put(`${this.apiUrl}/${id}`, service);
   }
 
-  deleteService(id: number) {
-    return this.http.delete(`${this.apiUrl}/${id}`);
+  deleteService(id: number, agencyId: string) {
+    return this.http.delete(`${this.agencyUrl}/${agencyId}/services/${id}`);
   }
 }

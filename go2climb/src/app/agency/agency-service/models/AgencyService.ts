@@ -11,6 +11,8 @@ export interface AgencyService {
   agency_id: number;
   status: string;
   score: number;
+  agency_name: string;
+  agency_img: string;
 }
 
 export interface AgencyServiceRequest {
@@ -30,6 +32,8 @@ export interface AgencyServiceResponse extends AgencyServiceRequest {
   id: number;
   agency: {
     id: number;
+    photo: string;
+    name: string;
   };
 }
 

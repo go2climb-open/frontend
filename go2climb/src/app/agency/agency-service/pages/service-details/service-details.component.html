@@ -27,10 +27,10 @@
 
     <div class="details">
       <div class="profile">
-        <img src="../../assets/default_agency_logo.png" alt="agency_logo" />
+        <img [src]="currentService?.agency_img" alt="agency_logo" />
 
         <div class="name">
-          <strong>By: Peru travel</strong>
+          <strong>By: {{ currentService?.agency_name }}</strong>
         </div>
       </div>
 
