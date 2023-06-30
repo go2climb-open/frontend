@@ -13,8 +13,8 @@ export class AgencyServiceService {
   constructor(private http: HttpClient) {}
 
   // apiUrl = 'http://localhost:3000/services';
-  apiUrl = 'http://44.204.1.137:8080/api/v1/services';
-  agencyUrl = 'http://44.204.1.137:8080/api/v1/agencies';
+  apiUrl = 'https://go2climbopen-183b10dd661a.herokuapp.com/api/v1/services';
+  agencyUrl = 'https://go2climbopen-183b10dd661a.herokuapp.com/api/v1/agencies';
 
   getServiceById(id: number) {
     return this.http.get<AgencyServiceResponse>(`${this.apiUrl}/${id}`);

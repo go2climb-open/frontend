@@ -8,7 +8,7 @@ import { agency } from '../models/agency';
 })
 export class AgencyAccountService {
 
-  apiUrl = 'http://44.204.1.137:8080/api/v1/agencies';
+  apiUrl = 'https://go2climbopen-183b10dd661a.herokuapp.com/api/v1/agencies';
 
   constructor(private http: HttpClient) {}
 

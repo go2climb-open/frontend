@@ -7,7 +7,7 @@ import { Observable, throwError } from 'rxjs';
 })
 export class TouristHireService {
 
-  basePath : string = 'http://44.204.1.137:8080/api/v1/services'
+  basePath : string = 'https://go2climbopen-183b10dd661a.herokuapp.com/api/v1/services'
   httpOptions : {headers:HttpHeaders} ={
     headers: new HttpHeaders({
       'Content-Type' : 'application/json',

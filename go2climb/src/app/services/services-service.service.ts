@@ -8,8 +8,8 @@ import { Iservice } from '../models/service';
 })
 export class ServicesService {
 
-  basePath : string = 'http://44.204.1.137:8080/api/v1/services'
-  agencyservice: string = 'http://44.204.1.137:8080/api/v1/agencies/'
+  basePath : string = 'https://go2climbopen-183b10dd661a.herokuapp.com/api/v1/services'
+  agencyservice: string = 'https://go2climbopen-183b10dd661a.herokuapp.com/api/v1/agencies/'
 
   httpOptions : {headers:HttpHeaders} ={
     headers: new HttpHeaders({

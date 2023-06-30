@@ -6,7 +6,7 @@ import { Tourist } from 'src/app/models/tourist';
   providedIn: 'root',
 })
 export class TouristService {
-  apiUrl = 'http://44.204.1.137:8080/api/v1/tourists';
+  apiUrl = 'https://go2climbopen-183b10dd661a.herokuapp.com/api/v1/tourists';
 
   constructor(private http: HttpClient) {}
 
